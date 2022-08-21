@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import HomeHeader from '../components/layouts/headers/home/HomeHeader';
 import { NextPageWithLayout } from './page';
 
 const Home: NextPageWithLayout = () => {
@@ -8,6 +9,7 @@ const Home: NextPageWithLayout = () => {
 
   return (
     <section className="flex flex-col items-center gap-y-5 mt-12 sm:mt-36">
+      <HomeHeader sampleTextProp="test" />
       <Image
         src="/Google.png"
         alt="Google Logo"
