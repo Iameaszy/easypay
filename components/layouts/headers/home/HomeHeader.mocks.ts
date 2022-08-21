@@ -1,6 +1,6 @@
-import { IHomeLayout } from './HomeLayout';
+import { IHomeHeader } from './HomeHeader';
 
-const base: IHomeLayout = {
+const base: IHomeHeader = {
   sampleTextProp: 'Hello world!',
 };
 

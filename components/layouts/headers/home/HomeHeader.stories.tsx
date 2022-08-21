@@ -1,17 +1,17 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import HomeLayout, { IHomeLayout } from './HomeLayout';
-import { mockBaseTemplateProps } from './HomeLayout.mocks';
+import HomeHeader, { IHomeHeader } from './HomeHeader';
+import { mockBaseTemplateProps } from './HomeHeader.mocks';
 
 export default {
-  title: 'templates/HomeLayout',
-  component: HomeLayout,
+  title: 'templates/HomeHeader',
+  component: HomeHeader,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
-} as ComponentMeta<typeof HomeLayout>;
+} as ComponentMeta<typeof HomeHeader>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof HomeLayout> = (args) => (
-  <HomeLayout {...args} />
+const Template: ComponentStory<typeof HomeHeader> = (args) => (
+  <HomeHeader {...args} />
 );
 
 export const Base = Template.bind({});
@@ -19,4 +19,4 @@ export const Base = Template.bind({});
 
 Base.args = {
   ...mockBaseTemplateProps.base,
-} as IHomeLayout;
+} as IHomeHeader;
