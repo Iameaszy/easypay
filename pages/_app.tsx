@@ -1,6 +1,6 @@
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import type { AppProps } from 'next/app';
-//import themes from '../global/theme';
+import themes from '../global/theme';
 import { NextPageWithLayout } from './page';
 
 interface AppPropsWithLayout extends AppProps {
@@ -8,13 +8,11 @@ interface AppPropsWithLayout extends AppProps {
 }
 const breakpoints = {
   base: '0em',
-  sm: '30em',
-  md: '48em',
-  lg: '62em',
-  xl: '80em',
-  '2xl': '96em',
+  sm: '62em',
+  md: '90em',
+  '2xl': '100em',
 };
-const theme = extendTheme({ breakpoints });
+const theme = extendTheme({ breakpoints, ...themes });
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout || ((page) => page);

@@ -1,13 +1,8 @@
-import {
-  AddIcon,
-  EditIcon,
-  ExternalLinkIcon,
-  HamburgerIcon,
-  RepeatIcon,
-} from '@chakra-ui/icons';
+import { HamburgerIcon } from '@chakra-ui/icons';
 import {
   Box,
-  Container,
+  BoxProps,
+  Button,
   Flex,
   Hide,
   IconButton,
@@ -16,22 +11,54 @@ import {
   Menu,
   MenuButton,
   MenuItem,
+  MenuItemProps,
   MenuList,
   Show,
-  Text,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import styles from './HomeHeader.module.css';
 
-export interface IHomeHeader {
-  sampleTextProp: string;
-}
-
-const HomeHeader: React.FC<IHomeHeader> = () => {
+const HeaderMenuItem = ({
+  children,
+  ...props
+}: { children: any } & MenuItemProps): any => {
   return (
-    <Container bg="black" className={styles.container}>
-      <Flex color="white" justifyContent={{ base: 'space-between' }}>
-        <Box w="40%">
+    <MenuItem
+      _active={{ backgroundColor: 'none' }}
+      _focus={{ backgroundColor: 'none' }}
+      paddingLeft="0"
+      {...props}
+    >
+      {children}
+    </MenuItem>
+  );
+};
+
+const NavLink = ({
+  text,
+  path = '/',
+  ...props
+}: { text: string; path?: string } & BoxProps) => {
+  return (
+    <Box {...props}>
+      <NextLink href={path} passHref>
+        <Link>{text}</Link>
+      </NextLink>
+    </Box>
+  );
+};
+
+const HomeHeader: React.FC<any> = () => {
+  return (
+    <Box
+      bg="black"
+      color="white"
+      width="100%"
+      display="flex"
+      justifyContent="center"
+      as="header"
+    >
+      <Flex width="90%" justifyContent={{ base: 'space-between' }}>
+        <Box maxW="125px">
           <NextLink href="#" passHref>
             <Link>
               <Image
@@ -46,41 +73,47 @@ const HomeHeader: React.FC<IHomeHeader> = () => {
           </NextLink>
         </Box>
         <Show above="sm">
-          <Box w="60%">
-            <Text>links</Text>
-          </Box>
-          <Box w="20%">
-            <Text>actions</Text>
-          </Box>
+          <Flex
+            justify="space-between"
+            alignItems="center"
+            w="80%"
+            maxWidth="800px"
+          >
+            <Box display="flex">
+              <NavLink padding="30px" text="Contact Us" path="#contact" />
+              <NavLink padding="30px" text="FAQ" path="#faq" />
+              <NavLink padding="30px" text="Help" path="#help" />
+            </Box>
+            <Box w="15rem" display="flex" alignItems="center">
+              <Button variant="transparent">Sign In</Button>
+              <Button variant="solid">Open an account</Button>
+            </Box>
+          </Flex>
         </Show>
         <Hide above="sm">
-          <Box bg="tomato">
+          <Box>
             <Menu>
               <MenuButton
                 as={IconButton}
                 aria-label="Options"
+                style={{ backgroundColor: 'transparent' }}
                 icon={<HamburgerIcon />}
               />
 
-              <MenuList w="100%">
-                <MenuItem icon={<AddIcon />} command="⌘T">
-                  New Tab
-                </MenuItem>
-                <MenuItem icon={<ExternalLinkIcon />} command="⌘N">
-                  New Window
-                </MenuItem>
-                <MenuItem icon={<RepeatIcon />} command="⌘⇧N">
-                  Open Closed Tab
-                </MenuItem>
-                <MenuItem icon={<EditIcon />} command="⌘O">
-                  Open File...
-                </MenuItem>
+              <MenuList rootProps={{ width: '90%' }} border="none">
+                <HeaderMenuItem>Contact Us</HeaderMenuItem>
+                <HeaderMenuItem>FAQ</HeaderMenuItem>
+                <HeaderMenuItem>Help</HeaderMenuItem>
+                <HeaderMenuItem>Sign in</HeaderMenuItem>
+                <HeaderMenuItem>
+                  <Button variant="solid">Open an account</Button>
+                </HeaderMenuItem>
               </MenuList>
             </Menu>
           </Box>
         </Hide>
       </Flex>
-    </Container>
+    </Box>
   );
 };
 

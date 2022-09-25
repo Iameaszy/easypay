@@ -10,7 +10,7 @@
     "node": ">=16.16.0"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 8080",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",
+    "@chakra-ui/storybook-addon": "^4.0.10",
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
     "@storybook/addon-actions": "^6.5.10",

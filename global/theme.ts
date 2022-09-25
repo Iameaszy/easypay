@@ -1,5 +1,7 @@
+import { ComponentStyleConfig } from '@chakra-ui/react';
+
 const colors = {
-  primary: "#2a2d3a",
+  primary: "#185cff",
   secondary: "#f78b43",
   accent: "#f2557a",
   white: "#ffffff",
@@ -182,9 +184,40 @@ const pageToast: {
     iconColor: "#717698"
   }
 };
+const Button: ComponentStyleConfig = {
+  baseStyle: {
+    borderRadius: '5px', // <-- border radius is same for all variants and sizes
+  },
+  variants: {
+    outline: {
+      border: '2px solid',
+      borderColor: 'primary',
+      color: 'white',
+    },
+    solid: {
+      bg: 'primary',
+      color: 'white',
+      _hover: {color: 'white', background: 'primary'},
+    },
+    transparent: {
+      color: 'white',
+      _hover: {color: 'white', background: 'primary'},
+    },
+  }
+}
 
-export const GoodkindTheme = {
-  name: "Goodkind",
+const Menu: ComponentStyleConfig = {
+  parts: ['menu', 'item'],
+  variants: {
+    noBackround: {
+      item: {
+        _focus: { backgroundColor: 'none' },
+        _active: { backgroundColor: 'none' }
+      },
+    }
+  },
+}
+export const GeepayTheme = {
   colors,
   fontColors,
   fonts,
@@ -202,6 +235,10 @@ export const GoodkindTheme = {
   pageToast,
   background,
   button,
+  components: {
+    Button,
+    Menu
+  }
 };
 
-export default GoodkindTheme;
+export default GeepayTheme;
