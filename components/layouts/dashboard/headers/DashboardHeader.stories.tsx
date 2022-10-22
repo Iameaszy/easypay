@@ -1,17 +1,17 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import HomeHeader from './HomeHeader';
-import { mockBaseTemplateProps } from './HomeHeader.mocks';
+import DashboardHeader from './DashboardHeader';
+import { mockBaseTemplateProps } from './DashboardHeader.mocks';
 
 export default {
-  title: 'templates/HomeHeader',
-  component: HomeHeader,
+  title: 'templates/DashboardHeader',
+  component: DashboardHeader,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
-} as ComponentMeta<typeof HomeHeader>;
+} as ComponentMeta<typeof DashboardHeader>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof HomeHeader> = (args) => (
-  <HomeHeader {...args} />
+const Template: ComponentStory<typeof DashboardHeader> = (args) => (
+  <DashboardHeader {...args} />
 );
 
 export const Base = Template.bind({});

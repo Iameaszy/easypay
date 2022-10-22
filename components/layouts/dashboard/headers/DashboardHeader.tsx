@@ -49,15 +49,8 @@ const NavLink = ({
 
 const HomeHeader: React.FC<any> = () => {
   return (
-    <Box
-      bg="black"
-      color="white"
-      width="100%"
-      display="flex"
-      justifyContent="center"
-      as="header"
-    >
-      <Flex width="90%" justifyContent={{ base: 'space-between' }}>
+    <Flex width="100%" bg="black" as="header" justify="center">
+      <Flex width="60%" justify={{ base: 'space-between' }}>
         <Box maxW="125px">
           <NextLink href="#" passHref>
             <Link>
@@ -78,6 +71,7 @@ const HomeHeader: React.FC<any> = () => {
             alignItems="center"
             w="80%"
             maxWidth="800px"
+            as="header"
           >
             <Box display="flex">
               <NavLink padding="30px" text="Contact Us" path="#contact" />
@@ -91,7 +85,7 @@ const HomeHeader: React.FC<any> = () => {
           </Flex>
         </Show>
         <Hide above="sm">
-          <Box>
+          <Box as="header">
             <Menu>
               <MenuButton
                 as={IconButton}
@@ -113,7 +107,7 @@ const HomeHeader: React.FC<any> = () => {
           </Box>
         </Hide>
       </Flex>
-    </Box>
+    </Flex>
   );
 };
 
