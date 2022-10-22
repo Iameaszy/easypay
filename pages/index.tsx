@@ -25,6 +25,7 @@ const Home: NextPageWithLayout = () => {
             </ul>
             <Button variant="solid">Open an account</Button>
           </Box>
+          <p>hhhhhhhhhh</p>
           <Box>image</Box>
         </Flex>
       </MainDashboard>
