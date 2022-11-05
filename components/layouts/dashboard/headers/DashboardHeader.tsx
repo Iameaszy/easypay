@@ -13,7 +13,7 @@ import {
   MenuItem,
   MenuItemProps,
   MenuList,
-  Show
+  Show,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
@@ -41,7 +41,9 @@ const NavLink = ({
   return (
     <Box {...props}>
       <NextLink href={path} passHref>
-        <Link color='#152c5b' _hover={{ textDecoration: 'none' }}>{text}</Link>
+        <Link color="#152c5b" _hover={{ textDecoration: 'none' }}>
+          {text}
+        </Link>
       </NextLink>
     </Box>
   );
@@ -49,7 +51,7 @@ const NavLink = ({
 
 const HomeHeader: React.FC<any> = () => {
   return (
-    <Flex width="100%" as="header" bg='white' justify="center">
+    <Flex width="100%" as="header" bg="white" justify="center">
       <Flex width="60%" justify={{ base: 'space-between' }}>
         <Box maxW="125px">
           <NextLink href="#" passHref>
@@ -73,13 +75,15 @@ const HomeHeader: React.FC<any> = () => {
             maxWidth="800px"
             as="header"
           >
-            <Box display="flex" color='#152c5b'>
+            <Box display="flex" color="#152c5b">
               <NavLink padding="30px" text="Contact Us" path="#contact" />
               <NavLink padding="30px" text="FAQ" path="#faq" />
               <NavLink padding="30px" text="Help" path="#help" />
             </Box>
             <Box w="15rem" display="flex" alignItems="center">
-              <Button variant="transparent" color='#152c5b'>Sign In</Button>
+              <Button variant="transparent" color="#152c5b">
+                Sign In
+              </Button>
               <Button variant="solid">Open an account</Button>
             </Box>
           </Flex>
