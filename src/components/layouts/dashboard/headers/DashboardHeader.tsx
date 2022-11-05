@@ -41,7 +41,7 @@ const NavLink = ({
   return (
     <Box {...props}>
       <NextLink href={path} passHref>
-        <Link color="white" _hover={{ textDecoration: 'none' }}>
+        <Link color="#152c5b" _hover={{ textDecoration: 'none' }}>
           {text}
         </Link>
       </NextLink>
