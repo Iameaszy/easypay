@@ -13,7 +13,7 @@ import {
   MenuItem,
   MenuItemProps,
   MenuList,
-  Show,
+  Show
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
@@ -41,7 +41,7 @@ const NavLink = ({
   return (
     <Box {...props}>
       <NextLink href={path} passHref>
-        <Link>{text}</Link>
+        <Link color='white' _hover={{ textDecoration: 'none' }}>{text}</Link>
       </NextLink>
     </Box>
   );
