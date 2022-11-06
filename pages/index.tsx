@@ -9,15 +9,16 @@ const Home: NextPageWithLayout = () => {
     <>
       <DashboardHeader />
       <MainDashboard>
-        <Flex as="section" direction='row' justify='space-between' m='5% 0 0 0'>
-          <Box position='absolute' color='#8a95ad;' width='100%' h='100%'></Box>
+        <Box as="section" mt='50px' position='relative'>
+        <Box bg='powderblue' position='absolute' z-index='-10' right='-20vw' h='32vw' w='66vw' mt='-7%'></Box>
+        <Flex position='relative' z-index='10'>
           <Box w='100%'>
-            <Text backgroundColor='royalblue' borderRadius='20px' padding='2% 10% 2% 2%' fontSize='70%' m='0 50% 8% 3%'><CheckCircleIcon margin='-2% 5% 0 0' />Get paid in minutes</Text>
-            <Heading margin='0 0 6% 0'>Digital Financial <br /> Platform for the Gig <br /> Econonomy.</Heading>
-            <UnorderedList margin='0 0 10% 10%' fontSize='70%'>
-              <ListItem padding='0 0 3% 0'>Create a USD, GBP, EUR accounts to receive <br /> payments for your gigs.</ListItem>
-              <ListItem padding='0 0 3% 0'>Automate employer billing.</ListItem>
-              <ListItem padding='0 0 3% 0'>Debit cards for easy spending.</ListItem>
+            <Text backgroundColor='whitesmoke' color='dodgerblue' borderRadius='20px' padding='2% 10% 2% 2%' fontSize='70%' m='0 49% 8% 3%'><CheckCircleIcon margin='-2% 6% 0 0' />Get paid in minutes</Text>
+            <Heading margin='0 0 6% 0' color='#152c5b'>Digital Financial <br /> Platform for the Gig <br /> Econonomy.</Heading>
+            <UnorderedList margin='0 0 8% 10%' fontSize='70%' color='#152c5b'>
+              <ListItem padding='0 0 4% 0'>Create a USD, GBP, EUR accounts to receive <br /> payments for your gigs.</ListItem>
+              <ListItem padding='0 0 4% 0'>Automate employer billing.</ListItem>
+              <ListItem padding='0 0 4% 0'>Debit cards for easy spending.</ListItem>
               <ListItem>Build your credit score.</ListItem>
             </UnorderedList>
             <Button variant="solid">Open an account</Button>
@@ -25,7 +26,8 @@ const Home: NextPageWithLayout = () => {
           <Box w='100%'>
             <Image src='GoDigital.jpg' alt='Freelancer' borderRadius='5px' />
           </Box>
-        </Flex>
+          </Flex>
+        </Box>
       </MainDashboard>
     </>
   );
