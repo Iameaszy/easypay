@@ -10,7 +10,7 @@ const Home: NextPageWithLayout = () => {
       <DashboardHeader />
       <MainDashboard>
         <Box as="section" mt='50px' position='relative'>
-        <Box bg='powderblue' position='absolute' z-index='-10' right='-20vw' h='32vw' w='66vw' mt='-7%'></Box>
+        <Box bgColor='hsl(187,52%,97%)' position='absolute' z-index='-10' right='-20vw' h='32vw' w='66vw' mt='-7%'></Box>
         <Flex position='relative' z-index='10'>
           <Box w='100%'>
             <Text backgroundColor='whitesmoke' color='dodgerblue' borderRadius='20px' padding='2% 10% 2% 2%' fontSize='70%' m='0 49% 8% 3%'><CheckCircleIcon margin='-2% 6% 0 0' />Get paid in minutes</Text>
