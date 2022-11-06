@@ -9,10 +9,9 @@ import {
   Text,
   UnorderedList,
 } from '@chakra-ui/react';
-import FaqSections from '../components/faqSection/FaqSections';
 import DashboardHeader from '../components/layouts/dashboard/headers/DashboardHeader';
 import MainDashboard from '../components/layouts/dashboard/main/MainDashboard';
-
+import VirtualAccount from '../components/virtualAccount/VirtualAccount';
 import { NextPageWithLayout } from './page';
 
 const Home: NextPageWithLayout = () => {
@@ -79,8 +78,7 @@ const Home: NextPageWithLayout = () => {
           </Flex>
         </Box>
       </MainDashboard>
-
-      <FaqSections />
+      <VirtualAccount />
     </>
   );
 };
