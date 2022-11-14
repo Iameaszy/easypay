@@ -3,6 +3,7 @@ import { Box, Button, Flex, Heading, Image, ListItem, Text, UnorderedList } from
 import BankingBenefits from '../components/banking/BankingBenefits';
 import DashboardHeader from '../components/layouts/dashboard/headers/DashboardHeader';
 import MainDashboard from '../components/layouts/dashboard/main/MainDashboard';
+import GetMore from '../components/more/GetMore';
 import { NextPageWithLayout } from './page';
 
 const Home: NextPageWithLayout = () => {
@@ -31,6 +32,7 @@ const Home: NextPageWithLayout = () => {
         </Box>
       </MainDashboard>
       <BankingBenefits />
+      <GetMore />
     </>
   );
 };
