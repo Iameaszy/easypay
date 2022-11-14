@@ -47,7 +47,7 @@ const GetMore = () => {
                 PATNERS
               </Text>
               <Heading color="#152c5b" margin="6% 0 15% 0" lineHeight="1.3em">
-                We're there during rainy days.
+                We&apos;re there during rainy days.
               </Heading>
               <Text
                 backgroundColor="#185cff"
@@ -81,6 +81,7 @@ const GetMore = () => {
               </Heading>
               <Image
                 margin="-5% 0 0 -5%"
+                alt="Green checkmark"
                 src="SkeletonCheck.svg"
                 width="8%"
                 height="8%"
@@ -97,6 +98,7 @@ const GetMore = () => {
               </Text>
               <Image
                 margin="5% 0 0 -5%"
+                alt="Green checkmark"
                 src="SkeletonCheck.svg"
                 width="8%"
                 height="8%"
@@ -230,7 +232,7 @@ const GetMore = () => {
                       The fact I can get salary in USD and also sell at a good
                       exchange rate on the same platform and still have a USD
                       salary account makes Geegpay the best. Salary advance also
-                      makes my life easier. Thanks Geegpay❤️
+                      makes my life easier. Thanks Geegpay &#10084;
                     </Text>
                     <Image
                       src="GreenUser.svg"
@@ -267,8 +269,8 @@ const GetMore = () => {
                       fontWeight="bold"
                     >
                       I recently started using Geegpay and the experience has
-                      been wow as I don't have to keep track of when to send
-                      invoice to my employer .
+                      been wow as I don&apos;t have to keep track of when to
+                      send invoice to my employer .
                     </Text>
                     <Image
                       src="GreenUser.svg"
