@@ -1,0 +1,47 @@
+name: Push To QA
+
+on:
+  pull_request:
+    branches: ['dev']
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Push PR To QA Environment
+    environment:
+      name: qa
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Use Node.js 16.16.0
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.16.0
+
+      - name: 🧰 Install dependencies
+        run: npm ci
+
+      - name: 📦 Build project
+        run: npm run build --if-present
+
+      - name: 🚀 Deploy to Netlify
+        id: deploy-netlify
+        uses: netlify/actions/cli@master
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        with:
+          args: deploy -m 'v${{ steps.package-version.outputs.current-version}} ・ ${{ github.head_ref }}'
+
+        # Publish the inspect and preview link to the PR
+      - name: 👓 Netlify Preview URL
+        uses: unsplash/comment-on-pr@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OUTPUT: "This pull request is being automatically deployed to Netlify.\n\n🔍 Inspect: ${{ steps.deploy-netlify.outputs.NETLIFY_LOGS_URL }}\n✅ Preview: ${{ steps.deploy-netlify.outputs.NETLIFY_URL }}"
+        with:
+          msg: ${{ env.OUTPUT }}
+          check_for_duplicate_msg: false
