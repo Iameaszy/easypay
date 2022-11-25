@@ -10,6 +10,7 @@ import {
   UnorderedList,
 } from '@chakra-ui/react';
 import BankingBenefits from '../components/banking/BankingBenefits';
+import Footer from '../components/footer/Footer';
 import DashboardHeader from '../components/layouts/dashboard/headers/DashboardHeader';
 import MainDashboard from '../components/layouts/dashboard/main/MainDashboard';
 import GetMore from '../components/more/GetMore';
@@ -69,6 +70,7 @@ const Home: NextPageWithLayout = () => {
       </MainDashboard>
       <BankingBenefits />
       <GetMore />
+      <Footer />
     </>
   );
 };
