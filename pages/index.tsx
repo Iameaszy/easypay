@@ -10,6 +10,7 @@ import {
   UnorderedList,
 } from '@chakra-ui/react';
 import DebitSection from '../components/debitSection/DebitSection';
+import FaqSections from '../components/faqSection/FaqSections';
 import DashboardHeader from '../components/layouts/dashboard/headers/DashboardHeader';
 import MainDashboard from '../components/layouts/dashboard/main/MainDashboard';
 import MobileApp from '../components/MobileApp/MobileApp';
@@ -84,6 +85,7 @@ const Home: NextPageWithLayout = () => {
       <VirtualAccount />
       <MobileApp />
       <DebitSection />
+      <FaqSections />
     </>
   );
 };
