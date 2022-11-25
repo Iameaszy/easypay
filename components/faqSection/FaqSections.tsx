@@ -108,7 +108,7 @@ const FaqSections = () => {
                     lineHeight="28px"
                     fontWeight="500"
                   >
-                    What's the fee for receiving in my account?
+                    What`s the fee for receiving in my account?
                   </Box>
                   <Box
                     height={7}
@@ -127,7 +127,7 @@ const FaqSections = () => {
               </AccordionButton>
             </Heading>
             <AccordionPanel color="#8a95ad" fontSize="16px" lineHeight="24px">
-              You're charged only 0.9% when you received fund in your virtual
+              You`re charged only 0.9% when you received fund in your virtual
               bank account.
               <br />
               The minimum charges is $1.
@@ -147,7 +147,7 @@ const FaqSections = () => {
                     lineHeight="28px"
                     fontWeight="500"
                   >
-                    What's the fee for converting with in currency?
+                    What`s the fee for converting with in currency?
                   </Box>
                   <Box
                     height={7}
@@ -240,7 +240,7 @@ const FaqSections = () => {
             </Heading>
             <AccordionPanel color="#8a95ad" fontSize="16px" lineHeight="24px">
               Account verification is instant for International Passport,
-              Driver's License and Voter's Card. NIN <br />
+              Driver`s License and Voter`s Card. NIN <br />
               can take between 24 - 48 hours.
             </AccordionPanel>
           </AccordionItem>
