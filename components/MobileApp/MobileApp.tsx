@@ -6,12 +6,12 @@ const MobileApp = () => {
       <Box
         backgroundColor="#f5faff"
         borderRadius="14px"
-        width="55%"
+        width="46rem"
         height="40rem"
         display="flex"
         flexDirection="column"
         justifyContent="center"
-        paddingLeft="110px"
+        paddingLeft="115px"
       >
         <Image alt="mobile" src="/images/mobile.png" height={50} width={50} />
 
