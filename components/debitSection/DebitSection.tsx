@@ -17,7 +17,7 @@ import {
 import { FaBriefcase, FaRegUser } from 'react-icons/fa';
 const DebitSection = () => {
   return (
-    <Flex marginTop="160px" gap="100px">
+    <Flex marginTop="160px" gap="8rem" width="full">
       <Box marginLeft="110px" position="relative" marginTop="30px">
         <Box
           backgroundColor="rgb(236, 245, 255)"
