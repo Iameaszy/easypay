@@ -1,6 +1,10 @@
 import { Box, Button, Flex, Heading, Text } from '@chakra-ui/react';
+import DebitSection from '../components/debitSection/DebitSection';
 import DashboardHeader from '../components/layouts/dashboard/headers/DashboardHeader';
 import MainDashboard from '../components/layouts/dashboard/main/MainDashboard';
+import MobileApp from '../components/MobileApp/MobileApp';
+import VirtualAccount from '../components/virtualAccount/VirtualAccount';
+
 import { NextPageWithLayout } from './page';
 
 const Home: NextPageWithLayout = () => {
@@ -28,6 +32,9 @@ const Home: NextPageWithLayout = () => {
           <Box>image</Box>
         </Flex>
       </MainDashboard>
+      <VirtualAccount />
+      <MobileApp />
+      <DebitSection />
     </>
   );
 };
