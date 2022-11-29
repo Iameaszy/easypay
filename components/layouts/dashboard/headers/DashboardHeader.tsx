@@ -74,13 +74,13 @@ const HomeHeader: React.FC<any> = () => {
             as="header"
           >
             <Box display="flex" color='#152c5b'>
-              <NavLink padding="30px" text="Contact Us" path="#contact" />
-              <NavLink padding="30px" text="FAQ" path="#faq" />
-              <NavLink padding="30px" text="Help" path="#help" />
+              <NavLink _hover={{color: 'gainsboro'}} fontWeight='bold' padding="30px" text="Contact Us" path="#contact" />
+              <NavLink _hover={{color: 'gainsboro'}} fontWeight='bold' padding="30px" text="FAQ" path="#faq" />
+              <NavLink _hover={{color: 'gainsboro'}} fontWeight='bold' padding="30px" text="Help" path="#help" />
             </Box>
             <Box w="15rem" display="flex" alignItems="center">
-              <Button variant="transparent" color='#152c5b'>Sign In</Button>
-              <Button variant="solid">Open an account</Button>
+              <NavLink _hover={{color: 'gainsboro'}} fontWeight='bold' w='50.5%' padding="30px" text="Sign In" path="#sign in" />
+              <Button size='sm' variant="solid">Open an account</Button>
             </Box>
           </Flex>
         </Show>
@@ -96,7 +96,7 @@ const HomeHeader: React.FC<any> = () => {
 
               <MenuList rootProps={{ width: '90%' }} border="none">
                 <HeaderMenuItem>Contact Us</HeaderMenuItem>
-                <HeaderMenuItem>FAQ</HeaderMenuItem>
+                <HeaderMenuItem>FAQ</HeaderMenuItem>  
                 <HeaderMenuItem>Help</HeaderMenuItem>
                 <HeaderMenuItem>Sign in</HeaderMenuItem>
                 <HeaderMenuItem>
