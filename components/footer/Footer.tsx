@@ -18,7 +18,7 @@ const Footer = () => {
           position="absolute"
           z-index="-10"
           left="-20vw"
-          h="40vw"
+          h="45vw"
           w="119vw"
           mt="-5%"
         ></Box>
@@ -35,8 +35,10 @@ const Footer = () => {
                 Meet Geegpay, the platform for smart and ambitious people.
               </Heading>
             </Box>
-            <Box width="20%" margin="4% 0 0 0">
-              <Button variant="solid">Open an account</Button>
+            <Box width="20%" margin="4% 04% 0 0">
+              <Button size="lg" variant="solid">
+                Open an account
+              </Button>
             </Box>
           </Flex>
         </MainDashboard>
@@ -58,23 +60,18 @@ const Footer = () => {
                   bg="#152c5b"
                   width="55%"
                   height="25%"
-                  margin="0 0 13% 0"
+                  margin="0 0 5% 0"
                 />
               </button>
-              <Text color="#8a95ad" fontSize="70%">
+              <Text color="#8a95ad" fontSize="90%">
                 Made for smart productive people
               </Text>
-              <Text color="#8a95ad" fontSize="70%">
+              <Text color="#8a95ad" fontSize="90%">
                 support@geegpay.africa
               </Text>
             </Box>
-            <Box color="white" width="13%" margin="-1% -35% 0 0">
-              <Text
-                fontSize="70%"
-                letterSpacing="0.1em"
-                fontWeight="bold"
-                margin="5% 0 10% 0"
-              >
+            <Box color="white" width="13%" margin="-1% -10% 0 0">
+              <Text fontSize="90%" letterSpacing="0.1em" m="5% 0 10% 0">
                 PAGES
               </Text>
               <Text
@@ -82,8 +79,7 @@ const Footer = () => {
                 href=""
                 _hover={{ color: 'gainsboro' }}
                 fontWeight="bold"
-                fontSize="70%"
-                margin="5% 0 20% 0"
+                fontSize="90%"
               >
                 About us
               </Text>
@@ -93,8 +89,7 @@ const Footer = () => {
                 href=""
                 _hover={{ color: 'gainsboro' }}
                 fontWeight="bold"
-                fontSize="70%"
-                margin="5% 0 20% 0"
+                fontSize="90%"
               >
                 Contact us
               </Text>
@@ -104,20 +99,14 @@ const Footer = () => {
                 href=""
                 _hover={{ color: 'gainsboro' }}
                 fontWeight="bold"
-                fontSize="70%"
-                margin="5% 0 20% 0"
+                fontSize="90%"
               >
                 Business
               </Text>
               <br />
             </Box>
-            <Box color="white" width="13%" margin="-1% -35% 0 0">
-              <Text
-                fontSize="70%"
-                letterSpacing="0.1em"
-                fontWeight="bold"
-                margin="5% 0 10% 0"
-              >
+            <Box color="white" width="13%" margin="-1% -10% 0 0">
+              <Text fontSize="90%" letterSpacing="0.1em" m="5% 0 10% 0">
                 ACCOUNT
               </Text>
               <Text
@@ -125,8 +114,7 @@ const Footer = () => {
                 href=""
                 _hover={{ color: 'gainsboro' }}
                 fontWeight="bold"
-                fontSize="70%"
-                margin="5% 0 20% 0"
+                fontSize="90%"
               >
                 Log in
               </Text>
@@ -136,20 +124,14 @@ const Footer = () => {
                 href=""
                 _hover={{ color: 'gainsboro' }}
                 fontWeight="bold"
-                fontSize="70%"
-                margin="5% 0 20% 0"
+                fontSize="90%"
               >
                 Sign up
               </Text>
               <br />
             </Box>
-            <Box color="white" width="18%" margin="-1% -35% 0 0">
-              <Text
-                fontSize="70%"
-                letterSpacing="0.1em"
-                fontWeight="bold"
-                margin="5% 0 10% 0"
-              >
+            <Box color="white" width="18%" margin="-1% -10% 0 0">
+              <Text fontSize="90%" letterSpacing="0.1em" m="5% 0 10% 0">
                 COMPANY
               </Text>
               <Text
@@ -157,8 +139,7 @@ const Footer = () => {
                 href=""
                 _hover={{ color: 'gainsboro' }}
                 fontWeight="bold"
-                fontSize="70%"
-                margin="5% 0 15% 0"
+                fontSize="90%"
               >
                 Terms of service
               </Text>
@@ -168,8 +149,7 @@ const Footer = () => {
                 href=""
                 _hover={{ color: 'gainsboro' }}
                 fontWeight="bold"
-                fontSize="70%"
-                margin="5% 0 20% 0"
+                fontSize="90%"
               >
                 Privacy Policy
               </Text>
@@ -183,7 +163,7 @@ const Footer = () => {
             z-index="10"
             flexDirection="row"
             justifyContent="space-between"
-            margin="10% 0 3% 0"
+            m="15% 0 3% 0"
           >
             <Box>
               <Text color="#8a95ad" fontSize="70%">
@@ -195,7 +175,8 @@ const Footer = () => {
                 <Image
                   src="TwitterLogo.svg"
                   alt="twitter logo"
-                  m="0 0 0 3000%"
+                  m="0 0 0 2550%"
+                  _hover={{ color: 'skyblue' }}
                 />
               </button>
             </Box>
@@ -204,7 +185,7 @@ const Footer = () => {
                 <Image
                   src="FacebookLogo.svg"
                   alt="facebook logo"
-                  m="0 0 0 6100%"
+                  m="0 0 0 5200%"
                 />
               </button>
             </Box>
@@ -213,7 +194,7 @@ const Footer = () => {
                 <Image
                   src="InstagramLogo.svg"
                   alt="instagram logo"
-                  m="0 0 0 3500%"
+                  m="0 0 0 3000%"
                 />
               </button>
             </Box>
