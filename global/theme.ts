@@ -23,6 +23,7 @@ const colors = {
     linkedin: "#0075BC",
     facebook: "#36549E"
   },
+  
   modalGrey: "rgba(255, 255, 255, 0.80)",
   
   gradients: {
