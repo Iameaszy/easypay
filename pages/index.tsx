@@ -30,7 +30,6 @@ const Home: NextPageWithLayout = () => {
           <Box>image</Box>
         </Flex>
       </MainDashboard>
-
       <FaqSections />
     </>
   );
