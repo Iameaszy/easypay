@@ -5,7 +5,7 @@ type props = {
 };
 const MainDashboard: React.FC<any> = ({ children }: props) => {
   return (
-    <Flex color="white" width="100%" bg="black" justify="center">
+    <Flex color="white" width="100%" justify="center">
       <Flex width="60%">{children}</Flex>
     </Flex>
   );
