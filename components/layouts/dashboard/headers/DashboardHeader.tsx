@@ -13,7 +13,7 @@ import {
   MenuItem,
   MenuItemProps,
   MenuList,
-  Show,
+  Show
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
@@ -41,7 +41,7 @@ const NavLink = ({
   return (
     <Box {...props}>
       <NextLink href={path} passHref>
-        <Link>{text}</Link>
+        <Link color='#152c5b' _hover={{ textDecoration: 'none' }}>{text}</Link>
       </NextLink>
     </Box>
   );
@@ -49,7 +49,7 @@ const NavLink = ({
 
 const HomeHeader: React.FC<any> = () => {
   return (
-    <Flex width="100%" bg="black" as="header" justify="center">
+    <Flex width="100%" as="header" bg='white' justify="center">
       <Flex width="60%" justify={{ base: 'space-between' }}>
         <Box maxW="125px">
           <NextLink href="#" passHref>
@@ -73,14 +73,14 @@ const HomeHeader: React.FC<any> = () => {
             maxWidth="800px"
             as="header"
           >
-            <Box display="flex">
-              <NavLink padding="30px" text="Contact Us" path="#contact" />
-              <NavLink padding="30px" text="FAQ" path="#faq" />
-              <NavLink padding="30px" text="Help" path="#help" />
+            <Box display="flex" color='#152c5b'>
+              <NavLink _hover={{color: 'gainsboro'}} fontWeight='bold' padding="30px" text="Contact Us" path="#contact" />
+              <NavLink _hover={{color: 'gainsboro'}} fontWeight='bold' padding="30px" text="FAQ" path="#faq" />
+              <NavLink _hover={{color: 'gainsboro'}} fontWeight='bold' padding="30px" text="Help" path="#help" />
             </Box>
             <Box w="15rem" display="flex" alignItems="center">
-              <Button variant="transparent">Sign In</Button>
-              <Button variant="solid">Open an account</Button>
+              <NavLink _hover={{color: 'gainsboro'}} fontWeight='bold' w='50.5%' padding="30px" text="Sign In" path="#sign in" />
+              <Button size='sm' variant="solid">Open an account</Button>
             </Box>
           </Flex>
         </Show>
@@ -96,7 +96,7 @@ const HomeHeader: React.FC<any> = () => {
 
               <MenuList rootProps={{ width: '90%' }} border="none">
                 <HeaderMenuItem>Contact Us</HeaderMenuItem>
-                <HeaderMenuItem>FAQ</HeaderMenuItem>
+                <HeaderMenuItem>FAQ</HeaderMenuItem>  
                 <HeaderMenuItem>Help</HeaderMenuItem>
                 <HeaderMenuItem>Sign in</HeaderMenuItem>
                 <HeaderMenuItem>
