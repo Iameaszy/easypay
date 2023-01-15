@@ -12,7 +12,8 @@ const breakpoints = {
   md: '90em',
   '2xl': '100em',
 };
-const theme = extendTheme({ breakpoints, ...themes });
+const theme = extendTheme({ breakpoints, ...themes }) as typeof themes &
+  Record<string, any>;
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout || ((page) => page);

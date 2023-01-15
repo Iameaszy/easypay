@@ -9,7 +9,7 @@ const colors = {
   grey: "#A1A3BB",
   green: "#1EA57D",
   lightGrey: "#e4e4e4",
-  darkGrey: "#3f4046",
+  darkGrey: "#8A95AD",
   lightestGrey: "#f6f6f6",
   negative: "#e46464",
   secondaryColor: "#f78b43",
@@ -41,6 +41,7 @@ const fontColors = {
   accent: colors.accent,
   bodyColor: colors.white,
   headerColor: colors.white,
+  darkGrey: colors.darkGrey,
 };
 
 const fonts = {
@@ -184,6 +185,7 @@ const pageToast: {
     iconColor: "#717698"
   }
 };
+
 const Button: ComponentStyleConfig = {
   baseStyle: {
     borderRadius: '5px', // <-- border radius is same for all variants and sizes

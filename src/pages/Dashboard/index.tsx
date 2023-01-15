@@ -9,17 +9,11 @@ import {
   Text,
   UnorderedList,
 } from '@chakra-ui/react';
+import FAQ from '../../components/layouts/dashboard/faq';
+import DashboardHeader from '../../components/layouts/dashboard/headers/DashboardHeader';
+import MainDashboard from '../../components/layouts/dashboard/main/MainDashboard';
 
-import DebitSection from '../components/debitSection/DebitSection';
-import FaqSections from '../components/faqSection/FaqSections';
-import DashboardHeader from '../components/layouts/dashboard/headers/DashboardHeader';
-import MainDashboard from '../components/layouts/dashboard/main/MainDashboard';
-import MobileApp from '../components/MobileApp/MobileApp';
-import VirtualAccount from '../components/virtualAccount/VirtualAccount';
-
-import { NextPageWithLayout } from './page';
-
-const Home: NextPageWithLayout = () => {
+export default function Dashboard() {
   return (
     <>
       <DashboardHeader />
@@ -83,16 +77,7 @@ const Home: NextPageWithLayout = () => {
           </Flex>
         </Box>
       </MainDashboard>
-      <VirtualAccount />
-      <MobileApp />
-      <DebitSection />
-      <FaqSections />
+      <FAQ />
     </>
   );
-};
-
-export default Home;
-
-Home.getLayout = (page) => {
-  return <div>{page}</div>;
-};
+}
