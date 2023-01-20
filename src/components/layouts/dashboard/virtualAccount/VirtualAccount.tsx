@@ -1,35 +1,47 @@
 import { CheckIcon } from '@chakra-ui/icons';
 import { Box, Flex, Heading, Image, Stack, Text } from '@chakra-ui/react';
+import { GeepayTheme } from '../../../../global/theme';
 
 const VirtualAccount = () => {
+  const theme = GeepayTheme;
   return (
-    <Flex>
-      <Box flex="0 0 55%">
-        <Image alt="" src="/images/united_bank.png" height={12} width={12} />
-        <Stack mt={4}>
-          <Text
-            fontSize={12}
-            fontWeight={500}
-            color="#8a95ad"
-            letterSpacing={5}
-          >
-            FOREIGN BANK ACCOUNTS
-          </Text>
-        </Stack>
-
-        <Box maxW="sm" mt={6}>
-          <Heading
-            fontWeight={500}
-            lineHeight="44px"
-            color="#152c5b"
-            fontSize="35"
-          >
-            Get free instant USD, EUR, GBP Accounts.
-          </Heading>
-        </Box>
-        <Box maxWidth="md" mt={15}>
+    <Flex mt="4rem">
+      <Box flex="0 0 55%" mt="3rem">
+        <Image
+          alt=""
+          src="/images/united_bank.png"
+          height="3rem"
+          width="3rem"
+        />
+        <Box mt="10px">
           <Stack>
-            <Text lineHeight={2} fontSize={16} fontWeight={600} color="#8a95ad">
+            <Text
+              fontSize="13px"
+              fontWeight={theme.fontWeights.bold}
+              color={theme.fontColors.darkGrey}
+              letterSpacing={5}
+            >
+              FOREIGN BANK ACCOUNTS
+            </Text>
+            <Heading
+              fontWeight="800"
+              lineHeight="50px"
+              color="#8A95AD"
+              fontSize="36px"
+            >
+              Get free instant USD, EUR, GBP Accounts.
+            </Heading>
+          </Stack>
+        </Box>
+
+        <Box mt="10px">
+          <Stack>
+            <Text
+              lineHeight="27px"
+              fontSize="16px"
+              fontWeight={700}
+              color="#8A95AD"
+            >
               Reduce cost and avoid delay in getting paid from your employer by
               creating a personalized foreign bank accounts to start receiving
               money like a pro you are!
@@ -37,38 +49,44 @@ const VirtualAccount = () => {
           </Stack>
         </Box>
 
-        <Box mt={10}>
-          <Box display="flex" alignItems="center" gap={4} fontWeight={600}>
+        <Box mt="25px">
+          <Box display="flex" alignItems="center" gap="12px" fontWeight={600}>
             <Box
-              backgroundColor="green"
+              backgroundColor="#1EA57D"
               as="span"
               display="flex"
               alignItems="center"
               justifyContent="center"
               color="white"
-              height={5}
-              width={5}
-              borderRadius="full"
+              height={25}
+              width={25}
+              borderRadius="100%"
             >
               <CheckIcon fontSize={12} />
             </Box>{' '}
-            <Box color="#152c5b">Save money on international inflow.</Box>
+            <Box color="#73819d">Save money on international inflow.</Box>
           </Box>
-          <Box display="flex" alignItems="center" mt={3} fontWeight={600}>
+          <Box
+            display="flex"
+            alignItems="center"
+            mt="15px"
+            gap="12px"
+            fontWeight={600}
+          >
             <Box
-              backgroundColor="green"
+              backgroundColor="#1EA57D"
               as="span"
               display="flex"
               alignItems="center"
               justifyContent="center"
               color="white"
-              height={5}
-              width={5}
-              borderRadius="full"
+              height={25}
+              width={25}
+              borderRadius="100%"
             >
               <CheckIcon fontSize={12} />
             </Box>{' '}
-            <Box color="#152c5b">
+            <Box color="#73819d">
               {' '}
               No maintenance cost . No minimum balance.
             </Box>
@@ -76,7 +94,7 @@ const VirtualAccount = () => {
         </Box>
       </Box>
       <Box mt={2} flex="0 0 45%">
-        <Image alt="" src="/images/virtual.png" />
+        <Image alt="" src="/images/virtual.png" height="40rem" width="33rem" />
       </Box>
     </Flex>
   );

@@ -14,6 +14,8 @@ const colors = {
   darkGrey: '#3f4046',
   lightestGrey: '#f6f6f6',
   negative: '#e46464',
+  whiteGrey: '#c5cad6',
+  whitestGrey: '#f5f6f8',
   secondaryColor: '#f78b43',
   primaryButton: '#E51837',
   secondaryButton: 'rgba(0, 0, 0, 0.4)',
@@ -44,6 +46,8 @@ const fontColors = {
   bodyColor: colors.white,
   headerColor: colors.white,
   darkGrey: colors.darkGrey,
+  whitestGrey: colors.whitestGrey,
+  whiteGrey: colors.whiteGrey,
 };
 
 const fonts = {
