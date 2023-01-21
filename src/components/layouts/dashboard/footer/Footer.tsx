@@ -8,7 +8,6 @@ import {
   Text,
   useTheme,
 } from '@chakra-ui/react';
-import { GeepayTheme } from '../../../global/theme';
 
 const Footer = () => {
   const theme = useTheme();
@@ -54,7 +53,7 @@ const Footer = () => {
               <Image
                 src="WhiteGeegpayLogo.png"
                 alt="White Geegpay logo"
-                bg={GeepayTheme.colors.blue}
+                bg={theme.colors.blue}
                 width="55%"
                 height="25%"
                 margin="0 0 5% 0"
