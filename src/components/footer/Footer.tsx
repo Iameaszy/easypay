@@ -6,15 +6,17 @@ import {
   Heading,
   Image,
   Text,
+  useTheme,
 } from '@chakra-ui/react';
 import { GeepayTheme } from '../../../global/theme';
 
 const Footer = () => {
+  const theme = useTheme();
   return (
     <>
       <Box as="section" position="relative" mt="0%">
         <Box
-          bgColor={GeepayTheme.colors.blue}
+          bgColor={theme.colors.blue}
           position="absolute"
           z-index="-10"
           left="-20vw"
@@ -30,7 +32,7 @@ const Footer = () => {
           margin="5% 0 0 0"
         >
           <Box width="50%">
-            <Heading color={GeepayTheme.colors.white} lineHeight="1.3em">
+            <Heading color={theme.colors.white} lineHeight="1.3em">
               Meet Geegpay, the platform for smart and ambitious people.
             </Heading>
           </Box>
@@ -58,25 +60,21 @@ const Footer = () => {
                 margin="0 0 5% 0"
               />
             </button>
-            <Text color={GeepayTheme.colors.grey} fontSize="90%">
+            <Text color={theme.colors.grey} fontSize="90%">
               Made for smart productive people
             </Text>
-            <Text color={GeepayTheme.colors.grey} fontSize="90%">
+            <Text color={theme.colors.grey} fontSize="90%">
               support@geegpay.africa
             </Text>
           </Box>
-          <Box
-            color={GeepayTheme.colors.white}
-            width="13%"
-            margin="-1% -10% 0 0"
-          >
+          <Box color={theme.colors.white} width="13%" margin="-1% -10% 0 0">
             <Text fontSize="90%" letterSpacing="0.1em" m="5% 0 10% 0">
               PAGES
             </Text>
             <Text
               as="a"
               href=""
-              _hover={{ color: `${GeepayTheme.colors.gainsboro}` }}
+              _hover={{ color: `${theme.colors.gainsboro}` }}
               fontWeight="bold"
               fontSize="90%"
             >
@@ -86,7 +84,7 @@ const Footer = () => {
             <Text
               as="a"
               href=""
-              _hover={{ color: `${GeepayTheme.colors.gainsboro}` }}
+              _hover={{ color: `${theme.colors.gainsboro}` }}
               fontWeight="bold"
               fontSize="90%"
             >
@@ -96,7 +94,7 @@ const Footer = () => {
             <Text
               as="a"
               href=""
-              _hover={{ color: `${GeepayTheme.colors.gainsboro}` }}
+              _hover={{ color: `${theme.colors.gainsboro}` }}
               fontWeight="bold"
               fontSize="90%"
             >
@@ -104,18 +102,14 @@ const Footer = () => {
             </Text>
             <br />
           </Box>
-          <Box
-            color={GeepayTheme.colors.white}
-            width="13%"
-            margin="-1% -10% 0 0"
-          >
+          <Box color={theme.colors.white} width="13%" margin="-1% -10% 0 0">
             <Text fontSize="90%" letterSpacing="0.1em" m="5% 0 10% 0">
               ACCOUNT
             </Text>
             <Text
               as="a"
               href=""
-              _hover={{ color: `${GeepayTheme.colors.gainsboro}` }}
+              _hover={{ color: `${theme.colors.gainsboro}` }}
               fontWeight="bold"
               fontSize="90%"
             >
@@ -125,7 +119,7 @@ const Footer = () => {
             <Text
               as="a"
               href=""
-              _hover={{ color: `${GeepayTheme.colors.gainsboro}` }}
+              _hover={{ color: `${theme.colors.gainsboro}` }}
               fontWeight="bold"
               fontSize="90%"
             >
@@ -133,18 +127,14 @@ const Footer = () => {
             </Text>
             <br />
           </Box>
-          <Box
-            color={GeepayTheme.colors.white}
-            width="18%"
-            margin="-1% -10% 0 0"
-          >
+          <Box color={theme.colors.white} width="18%" margin="-1% -10% 0 0">
             <Text fontSize="90%" letterSpacing="0.1em" m="5% 0 10% 0">
               COMPANY
             </Text>
             <Text
               as="a"
               href=""
-              _hover={{ color: `${GeepayTheme.colors.gainsboro}` }}
+              _hover={{ color: `${theme.colors.gainsboro}` }}
               fontWeight="bold"
               fontSize="90%"
             >
@@ -154,7 +144,7 @@ const Footer = () => {
             <Text
               as="a"
               href=""
-              _hover={{ color: `${GeepayTheme.colors.gainsboro}` }}
+              _hover={{ color: `${theme.colors.gainsboro}` }}
               fontWeight="bold"
               fontSize="90%"
             >
@@ -171,7 +161,7 @@ const Footer = () => {
           m="15% 0 3% 0"
         >
           <Box>
-            <Text color={GeepayTheme.colors.grey} fontSize="70%">
+            <Text color={theme.colors.grey} fontSize="70%">
               &copy; All rights reserved. Geegpay
             </Text>
           </Box>
