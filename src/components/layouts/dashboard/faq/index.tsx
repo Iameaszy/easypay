@@ -5,10 +5,9 @@ import { faq } from './data';
 const FAQ = () => {
   const theme = useTheme();
   return (
-    <Flex direction="column" marginTop="150px">
+    <Flex direction="column" color={theme.colors.grey} marginBottom="10rem">
       <Box textAlign="center">
         <Heading
-          color={theme.fontColors.darkGrey}
           fontSize="11px"
           letterSpacing="5px"
           lineHeight="20px"
@@ -17,7 +16,6 @@ const FAQ = () => {
           QUESTIONS
         </Heading>
         <Heading
-          color={theme.fontColors.darkGrey}
           fontSize="35px"
           lineHeight="44px"
           fontWeight="700"
@@ -29,7 +27,6 @@ const FAQ = () => {
       <Box>
         <Stack>
           <Text
-            color={theme.fontColors.darkGrey}
             fontSize="15px"
             textAlign="center"
             lineHeight="21px"

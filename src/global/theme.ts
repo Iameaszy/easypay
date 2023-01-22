@@ -54,6 +54,8 @@ const fontColors = {
 const fonts = {
   default:
     'Inter, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif',
+    body: 'Inter, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif',
+    heading: "'Plus Jakarta Sans', sans-serif"
 };
 
 const background = {

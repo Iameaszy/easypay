@@ -16,10 +16,11 @@ const FaqAccordion = ({ faq }: { faq: FaqAccordionProps[] }) => {
     <Accordion allowToggle>
       {faq.map((faqObj) => (
         <AccordionItem
-          borderBottom="2px"
           borderBottomColor={theme.fontColors.darkGrey}
-          padding="10px 0 30px 0"
           key={JSON.stringify(faqObj)}
+          border="none"
+          borderBottom={`solid 1px ${theme.colors.lightGrey}`}
+          padding="20px 0 40px 0"
         >
           <Heading>
             <AccordionButton>
@@ -44,7 +45,7 @@ const FaqAccordion = ({ faq }: { faq: FaqAccordionProps[] }) => {
                   justifyContent="center"
                   alignItems="center"
                   borderRadius="full"
-                  color="#152c5b"
+                  color={theme.colors.grey}
                   border="2px"
                 >
                   <ChevronDownIcon fontSize={20} color="#152c5b" />
@@ -63,7 +64,6 @@ const FaqAccordion = ({ faq }: { faq: FaqAccordionProps[] }) => {
           </AccordionPanel>
         </AccordionItem>
       ))}
-      ;
     </Accordion>
   );
 };
