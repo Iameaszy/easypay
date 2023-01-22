@@ -1,9 +1,16 @@
 import { CheckIcon } from '@chakra-ui/icons';
-import { Box, Flex, Heading, Image, Stack, Text } from '@chakra-ui/react';
-import { GeepayTheme } from '../../../../global/theme';
+import {
+  Box,
+  Flex,
+  Heading,
+  Image,
+  Stack,
+  Text,
+  useTheme,
+} from '@chakra-ui/react';
 
 const VirtualAccount = () => {
-  const theme = GeepayTheme;
+  const theme = useTheme();
   return (
     <Flex mt="4rem">
       <Box flex="0 0 55%" mt="3rem">
@@ -13,7 +20,7 @@ const VirtualAccount = () => {
           height="3rem"
           width="3rem"
         />
-        <Box mt="10px">
+        <Box mt="16px">
           <Stack>
             <Text
               fontSize="13px"
@@ -26,21 +33,22 @@ const VirtualAccount = () => {
             <Heading
               fontWeight="800"
               lineHeight="50px"
-              color="#8A95AD"
+              color={theme.fontColors.darkGrey}
               fontSize="36px"
+              mt="3rem"
             >
               Get free instant USD, EUR, GBP Accounts.
             </Heading>
           </Stack>
         </Box>
 
-        <Box mt="10px">
+        <Box mt="18px">
           <Stack>
             <Text
               lineHeight="27px"
-              fontSize="16px"
+              fontSize="15px"
               fontWeight={700}
-              color="#8A95AD"
+              color={theme.fontColors.darkGrey}
             >
               Reduce cost and avoid delay in getting paid from your employer by
               creating a personalized foreign bank accounts to start receiving
@@ -52,7 +60,7 @@ const VirtualAccount = () => {
         <Box mt="25px">
           <Box display="flex" alignItems="center" gap="12px" fontWeight={600}>
             <Box
-              backgroundColor="#1EA57D"
+              backgroundColor={theme.colors.green}
               as="span"
               display="flex"
               alignItems="center"
@@ -74,7 +82,7 @@ const VirtualAccount = () => {
             fontWeight={600}
           >
             <Box
-              backgroundColor="#1EA57D"
+              backgroundColor={theme.colors.green}
               as="span"
               display="flex"
               alignItems="center"
@@ -93,8 +101,8 @@ const VirtualAccount = () => {
           </Box>
         </Box>
       </Box>
-      <Box mt={2} flex="0 0 45%">
-        <Image alt="" src="/images/virtual.png" height="40rem" width="33rem" />
+      <Box mt={2} flex="0 0 85%">
+        <Image alt="" src="/images/virtual.png" height="40rem" width="30rem" />
       </Box>
     </Flex>
   );
