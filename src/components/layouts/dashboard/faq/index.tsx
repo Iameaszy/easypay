@@ -44,10 +44,9 @@ const FAQ = () => {
       <Box
         display="flex"
         flexDirection="column"
-        alignItems="center"
-        justifyContent="space-between"
         marginTop="60px"
         paddingBottom="15px"
+        width="100%"
       >
         <FaqAccordion faq={faq} />
       </Box>

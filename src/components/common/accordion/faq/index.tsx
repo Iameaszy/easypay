@@ -6,39 +6,45 @@ import {
   AccordionPanel,
   Box,
   Heading,
+  useTheme,
 } from '@chakra-ui/react';
 import { FaqAccordionProps } from './types';
 
 const FaqAccordion = ({ faq }: { faq: FaqAccordionProps[] }) => {
+  const theme = useTheme();
   return (
     <Accordion allowToggle>
       {faq.map((faqObj) => (
         <AccordionItem
           borderBottom="2px"
-          borderBottomColor="#8a95ad"
-          height="130px"
+          borderBottomColor={theme.fontColors.darkGrey}
+          padding="10px 0 30px 0"
           key={JSON.stringify(faqObj)}
         >
           <Heading>
-            <AccordionButton paddingTop="18px">
-              <Box display="flex" gap="10.3rem">
+            <AccordionButton>
+              <Box
+                display="flex"
+                flexDirection="row"
+                justifyContent="space-between"
+                width="100%"
+              >
                 <Box
                   color="#152c5b"
                   fontSize="18px"
                   lineHeight="28px"
-                  fontWeight="500"
+                  fontWeight="600"
                 >
                   {faqObj.question}
                 </Box>
                 <Box
-                  height={7}
-                  width={7}
+                  height="24px"
+                  width="24px"
                   display="flex"
                   justifyContent="center"
                   alignItems="center"
                   borderRadius="full"
-                  as="span"
-                  borderColor="#152c5b"
+                  color="#152c5b"
                   border="2px"
                 >
                   <ChevronDownIcon fontSize={20} color="#152c5b" />
@@ -46,7 +52,13 @@ const FaqAccordion = ({ faq }: { faq: FaqAccordionProps[] }) => {
               </Box>
             </AccordionButton>
           </Heading>
-          <AccordionPanel color="#8a95ad" fontSize="16px" lineHeight="24px">
+          <AccordionPanel
+            color="#8a95ad"
+            fontSize="16px"
+            lineHeight="24px"
+            paddingTop="15px"
+            paddingBottom="-20px"
+          >
             {faqObj.answer}
           </AccordionPanel>
         </AccordionItem>
