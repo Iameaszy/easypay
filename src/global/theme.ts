@@ -48,14 +48,14 @@ const fontColors = {
   darkGrey: colors.darkGrey,
   whitestGrey: colors.whitestGrey,
   whiteGrey: colors.whiteGrey,
-  darkestGrey: '#475A7E'
+  darkestGrey: '#475A7E',
 };
 
 const fonts = {
   default:
     'Inter, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif',
-    body: 'Inter, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif',
-    heading: "'Plus Jakarta Sans', sans-serif"
+  body: 'Inter, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif',
+  heading: "'Plus Jakarta Sans', sans-serif",
 };
 
 const background = {

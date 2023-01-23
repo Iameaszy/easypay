@@ -1,4 +1,5 @@
 import Hero from '../../components/Hero/Hero';
+import Borderless from '../../components/layouts/dashboard/borderless';
 import DebitSection from '../../components/layouts/dashboard/debitSection/DebitSection';
 import FAQ from '../../components/layouts/dashboard/faq';
 import Footer from '../../components/layouts/dashboard/footer/Footer';
@@ -13,6 +14,7 @@ export default function Dashboard() {
       <DashboardHeader />
       <MainDashboard>
         <Hero />
+        <Borderless />
         <VirtualAccount />
         <MobileApp />
         <DebitSection />
