@@ -4,15 +4,18 @@ const Borderless = () => {
   const theme = useTheme();
   return (
     <Box margin="45px 0 20px 0">
-      <Flex flexDirection="row" gap="5rem">
+      <Flex
+        direction={{ lg: 'row', base: 'column' }}
+        gap={{ lg: '5rem', base: '1.5rem' }}
+      >
         <Box
           color={theme.colors.blue}
           display="flex"
-          gap="2.3rem"
+          gap={{ lg: '2.3rem', base: '1.3rem' }}
           marginTop="2rem"
-          marginLeft="25px"
+          marginLeft={{ lg: '25px', base: '3px' }}
         >
-          <Text fontSize="20px" fontWeight="600">
+          <Text fontSize={{ lg: '20px', base: '17px' }} fontWeight="600">
             Go borderless with us
           </Text>
           <Box
@@ -23,15 +26,23 @@ const Borderless = () => {
             backgroundColor={theme.colors.blue}
           ></Box>
         </Box>
-        <Box marginLeft="3rem" width="45%">
-          <Text fontSize="25px" fontWeight="600" color={theme.colors.blue}>
+        <Box
+          marginLeft={{ lg: '3rem', base: '3px' }}
+          width={{ lg: '45%', base: '100%' }}
+        >
+          <Text
+            fontSize={{ lg: '25px', base: '23px' }}
+            fontWeight="600"
+            color={theme.colors.blue}
+          >
             Endless possibilities with Geegpay.
           </Text>
           <Text
-            fontSize="16px"
+            fontSize={{ lg: '16px', base: '15px' }}
             fontWeight="400"
+            lineHeight={{ base: '21px' }}
             color={theme.fontColors.light}
-            pt="25px"
+            pt={{ lg: '25px', base: '16px' }}
           >
             With Geegpay, it`s easy to convert to your local currency at
             competitive exchange rates in minutes. Send money and receive money
