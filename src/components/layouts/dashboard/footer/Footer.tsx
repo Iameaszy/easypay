@@ -13,7 +13,7 @@ const Footer = () => {
   const theme = useTheme();
   return (
     <>
-      <Box as="section" position="relative" mt="0%">
+      <Box as="section" position="relative">
         <Box
           bgColor={theme.colors.blue}
           position="absolute"

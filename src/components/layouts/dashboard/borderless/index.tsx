@@ -3,7 +3,7 @@ import { Box, Flex, Text, useTheme } from '@chakra-ui/react';
 const Borderless = () => {
   const theme = useTheme();
   return (
-    <Box margin="45px 0 20px 0">
+    <Box paddingLeft="8%">
       <Flex
         direction={{ lg: 'row', base: 'column' }}
         gap={{ lg: '5rem', base: '1.5rem' }}
