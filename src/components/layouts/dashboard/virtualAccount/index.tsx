@@ -4,7 +4,7 @@ import { Box, Flex, Heading, Image, Text, useTheme } from '@chakra-ui/react';
 const VirtualAccount = () => {
   const theme = useTheme();
   return (
-    <Flex mt="4rem">
+    <Flex>
       <Box flex="0 0 55%" mt="3rem">
         <Image
           alt=""

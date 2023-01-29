@@ -13,7 +13,7 @@ import {
 const Hero = () => {
   return (
     <>
-      <Box as="section" mt="50px" position="relative">
+      <Box as="section" position="relative">
         <Box
           bgColor="hsl(187,52%,97%)"
           position="absolute"

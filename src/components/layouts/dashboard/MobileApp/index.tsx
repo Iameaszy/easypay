@@ -2,7 +2,7 @@ import { Box, Flex, Heading, Image, Stack, Text } from '@chakra-ui/react';
 
 const MobileApp = () => {
   return (
-    <Flex position="relative" marginTop="80px">
+    <Flex position="relative">
       <Box
         backgroundColor="#f5faff"
         borderRadius="14px"

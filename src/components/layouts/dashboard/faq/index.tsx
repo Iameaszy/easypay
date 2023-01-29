@@ -5,7 +5,7 @@ import { faq } from './data';
 const FAQ = () => {
   const theme = useTheme();
   return (
-    <Flex direction="column" color={theme.colors.grey} marginBottom="10rem">
+    <Flex direction="column" color={theme.colors.grey}>
       <Box textAlign="center">
         <Heading
           fontSize="11px"

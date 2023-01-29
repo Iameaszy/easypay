@@ -1,4 +1,4 @@
-import { ComponentStyleConfig } from '@chakra-ui/react';
+import { ComponentStyleConfig, extendTheme } from '@chakra-ui/react';
 
 const colors = {
   primary: '#185cff',
@@ -48,14 +48,14 @@ const fontColors = {
   darkGrey: colors.darkGrey,
   whitestGrey: colors.whitestGrey,
   whiteGrey: colors.whiteGrey,
-  darkestGrey: '#475A7E'
+  darkestGrey: '#475A7E',
 };
 
 const fonts = {
   default:
     'Inter, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif',
-    body: 'Inter, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif',
-    heading: "'Plus Jakarta Sans', sans-serif"
+  body: 'Inter, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif',
+  heading: "'Plus Jakarta Sans', sans-serif",
 };
 
 const background = {
@@ -227,6 +227,16 @@ const Menu: ComponentStyleConfig = {
     },
   },
 };
+
+const breakpoints = {
+  sm: '320px',
+  md: '768px',
+  lg: '960px',
+  xl: '1200px',
+  '2xl': '1536px',
+};
+
+const theme = extendTheme({ breakpoints });
 export const GeepayTheme = {
   colors,
   fontColors,
@@ -249,6 +259,7 @@ export const GeepayTheme = {
     Button,
     Menu,
   },
+  theme,
 };
 
 export default GeepayTheme;
