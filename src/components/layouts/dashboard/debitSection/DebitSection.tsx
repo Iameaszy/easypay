@@ -6,7 +6,6 @@ import {
   Heading,
   Icon,
   Image,
-  Stack,
   Tab,
   TabList,
   TabPanel,
@@ -15,10 +14,32 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { FaBriefcase, FaRegUser } from 'react-icons/fa';
+import { IconNames } from '../../../../utils/getIcons/types/index';
+import TextWithIcon from '../../../common/TextWithIcon/index';
 const DebitSection = () => {
   return (
-    <Flex gap="8rem" width="full">
-      <Box marginLeft="110px" position="relative" marginTop="30px">
+    <Flex gap="25%">
+      <Flex position={'relative'}>
+        <Box>
+          <Image
+            alt="africa_lady"
+            src="/images/africa_lady2.jpeg"
+            borderRadius="20px"
+            height="490px"
+            width="395px"
+          />
+        </Box>
+        <Image
+          alt="atm_card"
+          src="/images/atm.png"
+          height="170px"
+          width="310px"
+          borderRadius="10px"
+          bottom="76px"
+          left="204px"
+          position={'absolute'}
+        />
+
         <Box
           backgroundColor="rgb(236, 245, 255)"
           height="330px"
@@ -27,47 +48,29 @@ const DebitSection = () => {
           marginLeft="90px"
           borderRadius="15px"
           zIndex="-1999"
+          position={'absolute'}
         ></Box>
-        <Image
-          alt="africa_lady"
-          src="/images/africa_lady2.jpeg"
-          height="490px"
-          width="395px"
-          borderRadius="10px"
-          position="absolute"
-          top="0"
-        />
-        <Image
-          alt="atm_card"
-          src="/images/atm.png"
-          height="170px"
-          width="310px"
-          borderRadius="10px"
-          position="absolute"
-          bottom="42px"
-          left="193px"
-        />
-      </Box>
-      <Box>
-        <Heading
-          color="rgb(138, 149, 173)"
-          fontSize="11px"
-          fontWeight="500"
-          letterSpacing="5px"
-          lineHeight="20px"
-        >
-          DEBIT CARD
-        </Heading>
-        <Heading
-          color="rgb(21, 44, 91)"
-          fontSize="35px"
-          lineHeight="40px"
-          fontWeight="500"
-          marginTop="25px"
-        >
-          Spend with no barrier
-        </Heading>
-        <Stack marginTop="30px">
+      </Flex>
+      <Flex>
+        <Box>
+          <Heading
+            color="rgb(138, 149, 173)"
+            fontSize="11px"
+            fontWeight="500"
+            letterSpacing="5px"
+            lineHeight="20px"
+          >
+            DEBIT CARD
+          </Heading>
+          <Heading
+            color="rgb(21, 44, 91)"
+            fontSize="35px"
+            lineHeight="40px"
+            fontWeight="500"
+            marginTop="25px"
+          >
+            Spend with no barrier
+          </Heading>
           <Text
             color="rgb(138, 149, 173)"
             fontSize="16px"
@@ -77,203 +80,157 @@ const DebitSection = () => {
             Easily spend across millions of websites with our <br />
             customized virtual and physical debit cards.
           </Text>
-        </Stack>
-        <Box marginTop="25px">
-          <Tabs variant="unstyled">
-            <TabList
-              backgroundColor="rgb(236, 245, 255)"
-              fontSize="14px"
-              display="flex"
-              paddingTop="8px"
-              paddingBottom="8px"
-              borderRadius="8px"
-              justifyContent="center"
-              alignItems="center"
-            >
-              <Tab
+          <Box marginTop="25px">
+            <Tabs variant="unstyled">
+              <TabList
+                backgroundColor="rgb(236, 245, 255)"
+                fontSize="14px"
                 display="flex"
-                gap="8px"
-                alignItems="center"
+                paddingTop="8px"
+                paddingBottom="8px"
+                borderRadius="8px"
                 justifyContent="center"
-                _selected={{ bg: 'white', color: '#185cff' }}
-              >
-                <Box>
-                  <Icon as={FaRegUser} />
-                </Box>
-                <Box
-                  color="rgb(138, 149, 173)"
-                  fontSize="17px"
-                  fontWeight="400"
-                  lineHeight="21px"
-                >
-                  Virtual Card
-                </Box>
-              </Tab>
-              <Tab
-                display="flex"
-                gap="8px"
                 alignItems="center"
-                justifyContent="center"
-                _selected={{ bg: 'white', color: '#185cff' }}
               >
-                <Box>
-                  <Icon as={FaBriefcase} />
-                </Box>
-                <Box
-                  color="rgb(138, 149, 173)"
-                  fontSize="17px"
-                  fontWeight="400"
-                  lineHeight="21px"
+                <Tab
+                  display="flex"
+                  gap="8px"
+                  alignItems="center"
+                  justifyContent="center"
+                  _selected={{ bg: 'white', color: '#185cff' }}
                 >
-                  Physical Card
-                </Box>
-              </Tab>
-            </TabList>
-            <TabPanels>
-              <TabPanel>
-                <Box marginTop="20px">
-                  <Heading
-                    color="rgb(21, 44, 91)"
-                    fontSize="20px"
-                    fontWeight="500"
-                    lineHeight="30px"
-                  >
-                    Lifestyle Benefits :
-                  </Heading>
-                  <Box
-                    display="flex"
-                    alignItems="center"
-                    gap="8px"
-                    marginTop="25px"
-                  >
-                    <Box
-                      height="20px"
-                      width="20px"
-                      borderRadius="full"
-                      border="2px"
-                      borderColor="green"
-                      display="flex"
-                      alignItems="center"
-                      justifyContent="center"
-                      color="green"
-                    >
-                      <CheckIcon color="green" fontSize="12px" />
-                    </Box>
-                    <Text
-                      color="rgb(138, 149, 173)"
-                      fontSize="15px"
-                      fontWeight="400"
-                      lineHeight="21px"
-                    >
-                      Spend across the globe with Geegpay card
-                    </Text>
+                  <Box>
+                    <Icon as={FaRegUser} />
                   </Box>
                   <Box
-                    display="flex"
-                    alignItems="center"
-                    gap="8px"
-                    marginTop="15px"
+                    color="rgb(138, 149, 173)"
+                    fontSize="17px"
+                    fontWeight="400"
+                    lineHeight="21px"
                   >
-                    <Box
-                      height="20px"
-                      width="20px"
-                      borderRadius="full"
-                      border="2px"
-                      borderColor="green"
-                      display="flex"
-                      alignItems="center"
-                      justifyContent="center"
-                      color="green"
-                    >
-                      <CheckIcon color="green" fontSize="12px" />
-                    </Box>
-                    <Text
-                      color="rgb(138, 149, 173)"
-                      fontSize="15px"
-                      fontWeight="400"
-                      lineHeight="21px"
-                    >
-                      Manage expenses by setting spending limit
-                    </Text>
+                    Virtual Card
                   </Box>
-                </Box>
-              </TabPanel>
-              <TabPanel>
-                <Box>
-                  <Heading
-                    color="rgb(21, 44, 91)"
-                    fontSize="20px"
-                    fontWeight="500"
-                    lineHeight="30px"
-                    marginTop="25px"
-                  >
-                    Lifestyle Benefits :
-                  </Heading>
-                  <Box
-                    display="flex"
-                    alignItems="center"
-                    gap="8px"
-                    marginTop="20px"
-                  >
-                    <Box
-                      height="20px"
-                      width="20px"
-                      borderRadius="full"
-                      border="2px"
-                      borderColor="green"
-                      display="flex"
-                      alignItems="center"
-                      justifyContent="center"
-                      color="green"
-                    >
-                      <CheckIcon color="green" fontSize="12px" />
-                    </Box>
-                    <Text
-                      color="rgb(138, 149, 173)"
-                      fontSize="15px"
-                      fontWeight="400"
-                      lineHeight="21px"
-                    >
-                      Physical MasterCard
-                    </Text>
+                </Tab>
+                <Tab
+                  display="flex"
+                  gap="8px"
+                  alignItems="center"
+                  justifyContent="center"
+                  _selected={{ bg: 'white', color: '#185cff' }}
+                >
+                  <Box>
+                    <Icon as={FaBriefcase} />
                   </Box>
                   <Box
-                    display="flex"
-                    alignItems="center"
-                    gap="8px"
-                    marginTop="15px"
+                    color="rgb(138, 149, 173)"
+                    fontSize="17px"
+                    fontWeight="400"
+                    lineHeight="21px"
                   >
+                    Physical Card
+                  </Box>
+                </Tab>
+              </TabList>
+              <TabPanels>
+                <TabPanel>
+                  <Box marginTop="20px">
+                    <Heading
+                      color="rgb(21, 44, 91)"
+                      fontSize="20px"
+                      fontWeight="500"
+                      lineHeight="30px"
+                    >
+                      Lifestyle Benefits :
+                    </Heading>
+                    <TextWithIcon
+                      text="Spend across the globe with Geegpay card"
+                      IconName={IconNames.CheckOutline}
+                      iconProps={{ color: 'green', fontSize: '20px' }}
+                    />
+                    <TextWithIcon
+                      text="Manage expenses by setting spending limit"
+                      IconName={IconNames.CheckOutline}
+                      iconProps={{ color: 'green', fontSize: '20px' }}
+                    />
+                  </Box>
+                </TabPanel>
+                <TabPanel>
+                  <Box>
+                    <Heading
+                      color="rgb(21, 44, 91)"
+                      fontSize="20px"
+                      fontWeight="500"
+                      lineHeight="30px"
+                      marginTop="25px"
+                    >
+                      Lifestyle Benefits :
+                    </Heading>
                     <Box
-                      height="20px"
-                      width="20px"
-                      borderRadius="full"
-                      border="2px"
-                      borderColor="green"
                       display="flex"
                       alignItems="center"
-                      justifyContent="center"
-                      color="green"
+                      gap="8px"
+                      marginTop="20px"
                     >
-                      <CheckIcon color="green" fontSize="12px" />
+                      <Box
+                        height="20px"
+                        width="20px"
+                        borderRadius="full"
+                        border="2px"
+                        borderColor="green"
+                        display="flex"
+                        alignItems="center"
+                        justifyContent="center"
+                        color="green"
+                      >
+                        <CheckIcon color="green" fontSize="12px" />
+                      </Box>
+                      <Text
+                        color="rgb(138, 149, 173)"
+                        fontSize="15px"
+                        fontWeight="400"
+                        lineHeight="21px"
+                      >
+                        Physical MasterCard
+                      </Text>
                     </Box>
-                    <Text
-                      color="rgb(138, 149, 173)"
-                      fontSize="15px"
-                      fontWeight="400"
-                      lineHeight="21px"
+                    <Box
+                      display="flex"
+                      alignItems="center"
+                      gap="8px"
+                      marginTop="15px"
                     >
-                      Travel round the world with Geegpay card
-                    </Text>
+                      <Box
+                        height="20px"
+                        width="20px"
+                        borderRadius="full"
+                        border="2px"
+                        borderColor="green"
+                        display="flex"
+                        alignItems="center"
+                        justifyContent="center"
+                        color="green"
+                      >
+                        <CheckIcon color="green" fontSize="12px" />
+                      </Box>
+                      <Text
+                        color="rgb(138, 149, 173)"
+                        fontSize="15px"
+                        fontWeight="400"
+                        lineHeight="21px"
+                      >
+                        Travel round the world with Geegpay card
+                      </Text>
+                    </Box>
                   </Box>
-                </Box>
-              </TabPanel>
-            </TabPanels>
-          </Tabs>
+                </TabPanel>
+              </TabPanels>
+            </Tabs>
+          </Box>
+          <Box marginTop="25px">
+            <Button variant="solid">Get started now</Button>
+          </Box>
         </Box>
-        <Box marginTop="25px">
-          <Button variant="solid">Get started now</Button>
-        </Box>
-      </Box>
+      </Flex>
     </Flex>
   );
 };
