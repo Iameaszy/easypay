@@ -5,7 +5,7 @@ import {
   MinusIcon,
 } from '@chakra-ui/icons';
 import { BsCheckCircle } from 'react-icons/bs';
-import { IconNames } from './types/index';
+import { IconNames } from '../Icon/types';
 
 const Icons = {
   check: CheckIcon,
@@ -13,8 +13,9 @@ const Icons = {
   minusIcon: MinusIcon,
 };
 
-const Icon = ({ iconName, ...props }: IconProps & { iconName: IconNames }) => (
-  <ChakraIcon as={Icons[iconName]} {...props} />
-);
-
-export default Icon;
+export const Icon = ({
+  iconName,
+  ...props
+}: IconProps & { iconName: IconNames }) => {
+  return <ChakraIcon as={Icons[iconName]} {...props} />;
+};

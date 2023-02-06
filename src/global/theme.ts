@@ -51,6 +51,7 @@ const fontColors = {
   whiteGrey: colors.whiteGrey,
   darkestGrey: '#475A7E',
   darkBlue: '#152c5b',
+  lightBlue: '#185cff',
 };
 
 const fonts = {
