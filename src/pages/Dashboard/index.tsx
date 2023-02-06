@@ -1,3 +1,4 @@
+import BankingBenefits from '../../components/layouts/dashboard/BankingBenefit/index';
 import Borderless from '../../components/layouts/dashboard/borderless';
 import DebitSection from '../../components/layouts/dashboard/debitSection/DebitSection';
 import FAQ from '../../components/layouts/dashboard/faq';
@@ -17,6 +18,7 @@ export default function Dashboard() {
         <Hero />
         <Borderless />
         <VirtualAccount />
+        <BankingBenefits />
         <MobileApp />
         <DebitSection />
         <GetMore />
