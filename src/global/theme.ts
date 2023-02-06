@@ -36,6 +36,7 @@ const colors = {
         'linear-gradient(-137deg, #F78646 0%, #F67E4E 44%, #F3606F 98%, #F2557A 100%);',
     },
   },
+  bgBlue: 'hsl(187,52%,98%)',
 };
 
 const fontColors = {
@@ -49,6 +50,7 @@ const fontColors = {
   whitestGrey: colors.whitestGrey,
   whiteGrey: colors.whiteGrey,
   darkestGrey: '#475A7E',
+  darkBlue: '#152c5b',
 };
 
 const fonts = {
