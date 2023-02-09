@@ -3,7 +3,6 @@ import {
   Box,
   Button,
   Flex,
-  Heading,
   Image,
   ListItem,
   Text,
@@ -12,60 +11,90 @@ import {
 
 const Hero = () => {
   return (
-    <>
-      <Box as="section" position="relative">
-        <Box
-          bgColor="hsl(187,52%,97%)"
-          position="absolute"
-          z-index="-10"
-          right="-20vw"
-          h="32vw"
-          w="66vw"
-          mt="-7%"
-        ></Box>
-        <Flex
-          position="relative"
-          z-index="10"
-          flexDirection="row"
-          justifyContent="space-between"
-        >
-          <Box w="100%">
-            <Text
-              bg="white"
-              color="dodgerblue"
-              boxShadow="-0px 5px 0px 0.01px hsl(0.00,0.00%,98.5%)"
-              borderRadius="20px"
-              p="2% 10% 2% 2%"
-              fontSize="70%"
-              m="0 49% 3% 3%"
-            >
-              <CheckCircleIcon margin="-2% 6% 0 0" />
+    <Box mt="50px" position="relative">
+      <Box
+        bgColor="#F5FAFF"
+        position="absolute"
+        z-index="-10"
+        right="-8rem"
+        h="32rem"
+        w="51rem"
+        display={{ lg: 'block', base: 'none' }}
+        top="-30px"
+      ></Box>
+      <Flex
+        position="relative"
+        z-index="10"
+        flexDirection={{ lg: 'row', base: 'column' }}
+        gap={{ lg: '2rem', base: '3.3rem' }}
+        w="full"
+      >
+        <Box>
+          <Box
+            bg="#fff"
+            borderRadius="20px"
+            display="flex"
+            gap="10px"
+            alignItems="center"
+            color="#185cff"
+            w="19rem"
+            boxShadow="3px 2px 4px 2px #d9d9d9"
+            padding="13px 26px 13px 18px"
+            marginBottom="35px"
+          >
+            <CheckCircleIcon />
+            <Text fontSize="15px" fontWeight={500}>
               Get paid in minutes
             </Text>
-            <Heading m="0 0 6% 0" color="#152c5b">
-              Digital Financial <br /> Platform for the Gig <br /> Econonomy.
-            </Heading>
-            <UnorderedList margin="6% 0 10% 7%" fontSize="80%" color="#152c5b">
-              <ListItem padding="0 0 4% 0">
-                Create a USD, GBP, EUR accounts to receive <br /> payments for
-                your gigs.
+          </Box>
+          <Box
+            w={{ lg: '536px', base: '350px' }}
+            marginLeft={{ base: '-10px' }}
+          >
+            <Text
+              fontSize={{ lg: '54px', base: '40px' }}
+              color="#152c5b"
+              fontWeight={700}
+              lineHeight={{ lg: '60px', base: '43px' }}
+            >
+              Digital Financial Platform for the Gig Econonomy.
+            </Text>
+          </Box>
+          <Box
+            paddingTop="20px"
+            marginLeft={{ lg: '15px', base: '5px' }}
+            fontSize="18px"
+            fontWeight="500"
+          >
+            <UnorderedList color="#152c5b">
+              <ListItem marginBottom="13px">
+                Create a USD, GBP, EUR accounts to receive payments for your
+                gigs.
               </ListItem>
-              <ListItem padding="0 0 4% 0">Automate employer billing.</ListItem>
-              <ListItem padding="0 0 4% 0">
+              <ListItem marginBottom="13px">
+                Automate employer billing.
+              </ListItem>
+              <ListItem marginBottom="13px">
                 Debit cards for easy spending.
               </ListItem>
-              <ListItem>Build your credit score.</ListItem>
+              <ListItem marginBottom="35px">Build your credit score.</ListItem>
             </UnorderedList>
-            <Button size="lg" variant="solid">
-              Open an account
-            </Button>
           </Box>
-          <Box w="100%">
-            <Image src="GoDigital.jpg" alt="Freelancer" borderRadius="5px" />
-          </Box>
-        </Flex>
-      </Box>
-    </>
+          <Button size="lg" variant="solid" fontSize="18px" fontWeight="500">
+            Open an account
+          </Button>
+        </Box>
+        <Box>
+          <Image
+            src="GoDigital.jpg"
+            alt="Freelancer"
+            borderRadius="10px"
+            h={{ lg: '31rem', base: '20rem' }}
+            w="33rem"
+          />
+        </Box>
+      </Flex>
+    </Box>
   );
 };
 

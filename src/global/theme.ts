@@ -11,6 +11,7 @@ const colors = {
   gainsboro: 'gainsboro',
   green: '#1EA57D',
   lightGrey: '#e4e4e4',
+  bgGray: '#F5FAFF',
   darkGrey: '#3f4046',
   lightestGrey: '#f6f6f6',
   negative: '#e46464',
