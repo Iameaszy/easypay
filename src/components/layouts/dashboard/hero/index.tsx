@@ -86,10 +86,11 @@ const Hero = () => {
         </Box>
         <Box>
           <Image
-            src="GoDigital.jpg"
+            src="Freelancer Raenest-p-800.jpeg"
             alt="Freelancer"
             borderRadius="10px"
             h={{ lg: '31rem', base: '20rem' }}
+            objectFit="contain"
             w="33rem"
           />
         </Box>
