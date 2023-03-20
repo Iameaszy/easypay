@@ -8,6 +8,8 @@ import {
   Heading,
   useTheme,
 } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+import { introScroll } from '../../../../global/motionStyle';
 import { FaqAccordionProps } from './types';
 
 const FaqAccordion = ({ faq }: { faq: FaqAccordionProps[] }) => {
@@ -29,6 +31,11 @@ const FaqAccordion = ({ faq }: { faq: FaqAccordionProps[] }) => {
                 flexDirection="row"
                 justifyContent="space-between"
                 width="100%"
+                variants={introScroll}
+                as={motion.div}
+                initial="hide"
+                whileInView="show"
+                viewport={{ once: true }}
               >
                 <Box
                   color="#152c5b"

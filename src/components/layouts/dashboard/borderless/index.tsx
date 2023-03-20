@@ -1,7 +1,10 @@
 import { Box, Flex, Text, useTheme } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+import { introScroll } from '../../../../global/motionStyle';
 
 const Borderless = () => {
   const theme = useTheme();
+
   return (
     <Box paddingLeft="8%">
       <Flex
@@ -14,6 +17,11 @@ const Borderless = () => {
           gap={{ lg: '2.3rem', base: '1.3rem' }}
           marginTop="2rem"
           marginLeft={{ lg: '25px', base: '3px' }}
+          variants={introScroll}
+          as={motion.div}
+          initial="hide"
+          whileInView="show"
+          viewport={{ once: true }}
         >
           <Text fontSize={{ lg: '20px', base: '17px' }} fontWeight="600">
             Go borderless with us
@@ -34,6 +42,11 @@ const Borderless = () => {
             fontSize={{ lg: '25px', base: '23px' }}
             fontWeight="600"
             color={theme.colors.blue}
+            variants={introScroll}
+            as={motion.p}
+            initial="hide"
+            whileInView="show"
+            viewport={{ once: true }}
           >
             Endless possibilities with Geegpay.
           </Text>
@@ -43,6 +56,11 @@ const Borderless = () => {
             lineHeight={{ base: '21px' }}
             color={theme.fontColors.light}
             pt={{ lg: '25px', base: '16px' }}
+            as={motion.p}
+            variants={introScroll}
+            initial="hide"
+            whileInView="show"
+            viewport={{ once: true }}
           >
             With Geegpay, it`s easy to convert to your local currency at
             competitive exchange rates in minutes. Send money and receive money

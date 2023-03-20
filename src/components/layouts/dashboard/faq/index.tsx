@@ -1,5 +1,7 @@
 import { Box, Flex, Heading, Stack, Text, useTheme } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 import FaqAccordion from '../../../../components/common/accordion/faq';
+import { introScroll } from '../../../../global/motionStyle';
 import { faq } from './data';
 
 const FAQ = () => {
@@ -12,6 +14,11 @@ const FAQ = () => {
           letterSpacing="5px"
           lineHeight="20px"
           fontWeight={600}
+          variants={introScroll}
+          as={motion.h1}
+          initial="hide"
+          whileInView="show"
+          viewport={{ once: true }}
         >
           QUESTIONS
         </Heading>
@@ -20,6 +27,11 @@ const FAQ = () => {
           lineHeight="44px"
           fontWeight="700"
           marginTop="10px"
+          variants={introScroll}
+          as={motion.h1}
+          initial="hide"
+          whileInView="show"
+          viewport={{ once: true }}
         >
           Frequently asked questions
         </Heading>
@@ -32,6 +44,11 @@ const FAQ = () => {
             lineHeight="21px"
             fontWeight="600"
             marginTop="24px"
+            variants={introScroll}
+            as={motion.p}
+            initial="hide"
+            whileInView="show"
+            viewport={{ once: true }}
           >
             Get answers to all questions you have <br /> and boost your
             knowledge about Geegpay.

@@ -1,5 +1,6 @@
 import { IconProps } from '@chakra-ui/icons';
 import { Box, Flex, Text, TextProps } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 import { Icon } from '../../../utils/getIcons/index';
 import { IconNames } from '../../../utils/getIcons/types/index';
 
@@ -15,7 +16,17 @@ const TextWithIcon = ({
   textProps?: TextProps;
 }) => {
   return (
-    <Box display="flex" alignItems="center" gap="8px" marginBottom="10px">
+    <Box
+      display="flex"
+      alignItems="center"
+      gap="8px"
+      marginBottom="10px"
+      as={motion.div}
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 1 }}
+      transition={{ ease: 'easeInOut' }}
+      viewport={{ once: true }}
+    >
       <Flex padding={'5px'}>
         <Icon iconName={IconName} {...iconProps} />
       </Flex>

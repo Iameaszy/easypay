@@ -13,6 +13,8 @@ import {
   Text,
   useTheme,
 } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+import { introScroll } from '../../../../global/motionStyle';
 import { IconNames } from '../../../../utils/getIcons/types';
 import TextWithIcon from '../../../common/TextWithIcon/index';
 
@@ -35,6 +37,11 @@ const GetMore = () => {
                 fontSize="70%"
                 letterSpacing="0.4em"
                 lineHeight="2em"
+                variants={introScroll}
+                as={motion.p}
+                initial="hide"
+                whileInView="show"
+                viewport={{ once: true }}
                 fontWeight="bold"
               >
                 GET MORE FROM OUR <br />
@@ -44,21 +51,43 @@ const GetMore = () => {
                 color={theme.fontColors.darkBlue}
                 margin="6% 0 15% 0"
                 lineHeight="1.3em"
+                variants={introScroll}
+                as={motion.h1}
+                initial="hide"
+                whileInView="show"
+                viewport={{ once: true }}
               >
                 We&apos;re there during rainy days.
               </Heading>
-              <Button size="lg" variant="solid">
-                Start now
-              </Button>
+              <Box
+                variants={introScroll}
+                as={motion.div}
+                initial="hide"
+                whileInView="show"
+                viewport={{ once: true }}
+              >
+                <Button size="lg" variant="solid">
+                  Start now
+                </Button>
+              </Box>
             </Box>
             <Box width="27%">
-              <Image
-                src="DollarSign.svg"
-                alt="$"
-                width="20%"
-                height="20%"
-                margin="0 0 0 -5%"
-              />
+              <Box
+                variants={introScroll}
+                as={motion.div}
+                initial="hide"
+                whileInView="show"
+                viewport={{ once: true }}
+                display="flex"
+              >
+                <Image
+                  src="DollarSign.svg"
+                  alt="$"
+                  width="20%"
+                  height="20%"
+                  margin="0 0 0 -5%"
+                />
+              </Box>
               <Heading
                 color={theme.fontColors.darkBlue}
                 fontSize="120%"
@@ -66,9 +95,15 @@ const GetMore = () => {
                 position="relative"
                 top="-22%"
                 left="25%"
+                variants={introScroll}
+                as={motion.h1}
+                initial="hide"
+                whileInView="show"
+                viewport={{ once: true }}
               >
                 Salary Advance
               </Heading>
+
               <TextWithIcon
                 text="Low interest salary advance"
                 IconName={IconNames.CheckOutline}
@@ -81,13 +116,21 @@ const GetMore = () => {
               />
             </Box>
             <Box width="27%">
-              <Image
-                src="Folder.svg"
-                alt="book"
-                width="20%"
-                height="20%"
-                margin="0 0 0 -5%"
-              />
+              <Box
+                variants={introScroll}
+                as={motion.div}
+                initial="hide"
+                whileInView="show"
+                viewport={{ once: true }}
+              >
+                <Image
+                  src="Folder.svg"
+                  alt="book"
+                  width="20%"
+                  height="20%"
+                  margin="0 0 0 -5%"
+                />
+              </Box>
               <Heading
                 color={theme.fontColors.darkBlue}
                 fontSize="120%"
@@ -95,6 +138,11 @@ const GetMore = () => {
                 position="relative"
                 top="-22%"
                 left="25%"
+                variants={introScroll}
+                as={motion.h1}
+                initial="hide"
+                whileInView="show"
+                viewport={{ once: true }}
               >
                 BNPL
               </Heading>
