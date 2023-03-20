@@ -1,5 +1,7 @@
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 import { Box, Flex, Heading, Image, Text, useTheme } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+import { introScroll } from '../../../../global/motionStyle';
 import Card from '../../../common/Card/index';
 import { IconNames } from '../../../common/Icon/types';
 const BankingBenefits = () => {
@@ -24,7 +26,14 @@ const BankingBenefits = () => {
           flexDirection="row"
           justifyContent="space-between"
         >
-          <Box w="45%">
+          <Box
+            w="45%"
+            variants={introScroll}
+            as={motion.div}
+            initial="hide"
+            whileInView="show"
+            viewport={{ once: true }}
+          >
             <Image
               src="SmartInvoicing.jpg"
               alt="autobill your employer"
@@ -43,17 +52,38 @@ const BankingBenefits = () => {
             />
           </Box>
           <Box w="40%" m="-2% 0 0 0">
-            <Image src="Bill.png" alt="paymenet invoice" h="8%" w="12%" />
+            <Box
+              variants={introScroll}
+              as={motion.div}
+              initial="hide"
+              whileInView="show"
+              viewport={{ once: true }}
+            >
+              <Image src="Bill.png" alt="paymenet invoice" h="8%" w="12%" />
+            </Box>
             <Text
               color={theme.fontColors.light}
               padding="5% 0 3% 0"
               fontSize="70%"
               letterSpacing="0.4em"
               fontWeight="bold"
+              variants={introScroll}
+              as={motion.p}
+              initial="hide"
+              whileInView="show"
+              viewport={{ once: true }}
             >
               SMART INVOICING
             </Text>
-            <Heading color={theme.fontColors.darkBlue} fontSize="180%">
+            <Heading
+              color={theme.fontColors.darkBlue}
+              fontSize="180%"
+              variants={introScroll}
+              as={motion.h1}
+              initial="hide"
+              whileInView="show"
+              viewport={{ once: true }}
+            >
               Auto-Bill your Employer
             </Heading>
             <Text
@@ -61,6 +91,11 @@ const BankingBenefits = () => {
               fontSize="90%"
               color={theme.fontColors.light}
               margin="5% 0 6% 0"
+              variants={introScroll}
+              as={motion.p}
+              initial="hide"
+              whileInView="show"
+              viewport={{ once: true }}
             >
               Let Geegpay generate your monthly or weekly invoice so that you
               can focus on what matters. Our system can auto-bill your employers
@@ -71,8 +106,12 @@ const BankingBenefits = () => {
               color={theme.fontColors.lightBlue}
               fontSize="60%"
               letterSpacing="0.3em"
-              as="a"
+              variants={introScroll}
+              as={motion.a}
               href=""
+              initial="hide"
+              whileInView="show"
+              viewport={{ once: true }}
             >
               LEARN MORE <ArrowForwardIcon />
             </Text>
@@ -86,6 +125,11 @@ const BankingBenefits = () => {
           fontSize="70%"
           letterSpacing="0.4em"
           fontWeight="bold"
+          variants={introScroll}
+          as={motion.p}
+          initial="hide"
+          whileInView="show"
+          viewport={{ once: true }}
         >
           DO MORE WITH GEEGPAY
         </Text>
@@ -93,12 +137,26 @@ const BankingBenefits = () => {
           fontSize="200%"
           color={theme.fontColors.darkBlue}
           lineHeight="1.2em"
+          variants={introScroll}
+          as={motion.h1}
+          initial="hide"
+          whileInView="show"
+          viewport={{ once: true }}
         >
           Hustle smartly with a full-stack online bank account that suits your
           needs.
         </Heading>
       </Box>
-      <Flex marginTop="9%" flexDirection="row" justifyContent="space-around">
+      <Flex
+        marginTop="9%"
+        flexDirection="row"
+        justifyContent="space-around"
+        variants={introScroll}
+        as={motion.div}
+        initial="hide"
+        whileInView="show"
+        viewport={{ once: true }}
+      >
         <Card
           heading="Free Transfer"
           body="Easily send and recieve money from friends and families at zero

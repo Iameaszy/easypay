@@ -13,14 +13,22 @@ import {
   Tabs,
   Text,
 } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 import { FaBriefcase, FaRegUser } from 'react-icons/fa';
+import { introScroll } from '../../../../global/motionStyle';
 import { IconNames } from '../../../../utils/getIcons/types/index';
 import TextWithIcon from '../../../common/TextWithIcon/index';
 const DebitSection = () => {
   return (
     <Flex gap="25%">
       <Flex position={'relative'}>
-        <Box>
+        <Box
+          variants={introScroll}
+          as={motion.div}
+          initial="hide"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
           <Image
             alt="africa_lady"
             src="/images/africa_lady2.jpeg"
@@ -59,6 +67,11 @@ const DebitSection = () => {
             fontWeight="500"
             letterSpacing="5px"
             lineHeight="20px"
+            variants={introScroll}
+            as={motion.h1}
+            initial="hide"
+            whileInView="show"
+            viewport={{ once: true }}
           >
             DEBIT CARD
           </Heading>
@@ -68,6 +81,11 @@ const DebitSection = () => {
             lineHeight="40px"
             fontWeight="500"
             marginTop="25px"
+            variants={introScroll}
+            as={motion.h1}
+            initial="hide"
+            whileInView="show"
+            viewport={{ once: true }}
           >
             Spend with no barrier
           </Heading>
@@ -76,6 +94,11 @@ const DebitSection = () => {
             fontSize="16px"
             lineHeight="24px"
             fontWeight="400"
+            variants={introScroll}
+            as={motion.p}
+            initial="hide"
+            whileInView="show"
+            viewport={{ once: true }}
           >
             Easily spend across millions of websites with our <br />
             customized virtual and physical debit cards.
@@ -139,6 +162,11 @@ const DebitSection = () => {
                       fontSize="20px"
                       fontWeight="500"
                       lineHeight="30px"
+                      variants={introScroll}
+                      as={motion.h1}
+                      initial="hide"
+                      whileInView="show"
+                      viewport={{ once: true }}
                     >
                       Lifestyle Benefits :
                     </Heading>
@@ -162,6 +190,11 @@ const DebitSection = () => {
                       fontWeight="500"
                       lineHeight="30px"
                       marginTop="25px"
+                      variants={introScroll}
+                      as={motion.h1}
+                      initial="hide"
+                      whileInView="show"
+                      viewport={{ once: true }}
                     >
                       Lifestyle Benefits :
                     </Heading>
@@ -181,6 +214,11 @@ const DebitSection = () => {
                         alignItems="center"
                         justifyContent="center"
                         color="green"
+                        variants={introScroll}
+                        as={motion.div}
+                        initial="hide"
+                        whileInView="show"
+                        viewport={{ once: true }}
                       >
                         <CheckIcon color="green" fontSize="12px" />
                       </Box>
@@ -209,6 +247,11 @@ const DebitSection = () => {
                         alignItems="center"
                         justifyContent="center"
                         color="green"
+                        variants={introScroll}
+                        as={motion.div}
+                        initial="hide"
+                        whileInView="show"
+                        viewport={{ once: true }}
                       >
                         <CheckIcon color="green" fontSize="12px" />
                       </Box>
@@ -226,7 +269,14 @@ const DebitSection = () => {
               </TabPanels>
             </Tabs>
           </Box>
-          <Box marginTop="25px">
+          <Box
+            marginTop="25px"
+            as={motion.div}
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 1 }}
+            transition={{ ease: 'easeInOut' }}
+            viewport={{ once: true }}
+          >
             <Button variant="solid">Get started now</Button>
           </Box>
         </Box>

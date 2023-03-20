@@ -8,6 +8,8 @@ import {
   Text,
   UnorderedList,
 } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+import { introScroll } from '../../../../global/motionStyle';
 
 const Hero = () => {
   return (
@@ -34,6 +36,11 @@ const Hero = () => {
             bg="#fff"
             borderRadius="20px"
             display="flex"
+            variants={introScroll}
+            as={motion.div}
+            initial="hide"
+            whileInView="show"
+            viewport={{ once: true }}
             gap="10px"
             alignItems="center"
             color="#185cff"
@@ -56,6 +63,11 @@ const Hero = () => {
               color="#152c5b"
               fontWeight={700}
               lineHeight={{ lg: '60px', base: '43px' }}
+              variants={introScroll}
+              as={motion.p}
+              initial="hide"
+              whileInView="show"
+              viewport={{ once: true }}
             >
               Digital Financial Platform for the Gig Econonomy.
             </Text>
@@ -67,24 +79,71 @@ const Hero = () => {
             fontWeight="500"
           >
             <UnorderedList color="#152c5b">
-              <ListItem marginBottom="13px">
+              <ListItem
+                marginBottom="13px"
+                variants={introScroll}
+                as={motion.li}
+                initial="hide"
+                whileInView="show"
+                viewport={{ once: true }}
+              >
                 Create a USD, GBP, EUR accounts to receive payments for your
                 gigs.
               </ListItem>
-              <ListItem marginBottom="13px">
+              <ListItem
+                marginBottom="13px"
+                variants={introScroll}
+                as={motion.li}
+                initial="hide"
+                whileInView="show"
+                viewport={{ once: true }}
+              >
                 Automate employer billing.
               </ListItem>
-              <ListItem marginBottom="13px">
+              <ListItem
+                marginBottom="13px"
+                variants={introScroll}
+                as={motion.li}
+                initial="hide"
+                whileInView="show"
+                viewport={{ once: true }}
+              >
                 Debit cards for easy spending.
               </ListItem>
-              <ListItem marginBottom="35px">Build your credit score.</ListItem>
+              <ListItem
+                marginBottom="35px"
+                variants={introScroll}
+                as={motion.li}
+                initial="hide"
+                whileInView="show"
+                viewport={{ once: true }}
+              >
+                Build your credit score.
+              </ListItem>
             </UnorderedList>
           </Box>
-          <Button size="lg" variant="solid" fontSize="18px" fontWeight="500">
+
+          <Button
+            size="lg"
+            variant="solid"
+            fontSize="18px"
+            fontWeight="500"
+            variants={introScroll}
+            as={motion.button}
+            initial="hide"
+            whileInView="show"
+            viewport={{ once: true }}
+          >
             Open an account
           </Button>
         </Box>
-        <Box>
+        <Box
+          variants={introScroll}
+          as={motion.div}
+          initial="hide"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
           <Image
             src="Freelancer Raenest-p-800.jpeg"
             alt="Freelancer"
